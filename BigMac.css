@@ -194,13 +194,13 @@ nav a.active {
 	background-color: white;
 	padding: 20px;
 	margin-top: 50px;
-	margin-right: 20px;
-    margin-left: auto;
-	min-width: 300px;
-    max-width: 600px;
+	margin: auto;
+	width: 900px;
 	height: 600px;
-	text-align: center;
+	text-align: left;
+	padding-left: 100px;
 }
+
 
 #headerlog {
 	color: white;
