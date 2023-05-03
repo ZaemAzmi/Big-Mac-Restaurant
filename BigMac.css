@@ -190,6 +190,18 @@ nav a.active {
 	margin-left: 30px;
 } 
 
+#wrapper9 {
+	background-color: black;
+	padding: 20px;
+	margin-top: 50px;
+	margin-right: 20px;
+    margin-left: auto;
+	min-width: 300px;
+    max-width: 600px;
+	height: 500px;
+	text-align: center;
+}
+
 #headerlog {
 	color: white;
     font-family: Verdana, Arial, sans-serif;
