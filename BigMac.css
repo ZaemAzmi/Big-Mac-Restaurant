@@ -1,0 +1,264 @@
+* { box-sizing: border-box; }
+header, nav, main, button, footer { display: block; }
+
+.background-image {
+	background-image: url('backimg1.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+body {
+    background-color: #292929;
+    color: #FFF;
+    font-family: Verdana, Arial, sans-serif;
+   }
+
+hr {
+	border-color:#00B1FF;
+	;
+}
+
+#bodyhome {
+    background-image: url('background.png');
+    color: #FFF;
+    font-family: Verdana, Arial, sans-serif;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#bodyhome h2 {
+	color: #00B1FF;
+  }
+
+#backabout {
+    background-image: url('Backabout.png');
+    color: #FFF;
+    font-family: Verdana, Arial, sans-serif;
+	background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body h2 {
+	color: #00B1FF;
+  }
+
+#headabout h1 {
+	color: #00B1FF;
+}
+
+#loginbody {
+	background-image: url('backimg1.png');
+	background-size: cover;
+	background-position: center;
+	background-color: #2072AF;
+	color: black;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#loginbody main{
+	vertical-align: top ;
+}
+
+nav {
+	background-image: url('BigMaclogo.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-style: italic;
+	margin-top: 30px;
+	height: 50px;
+	padding-bottom: 5px;
+}
+  
+nav a {
+	text-decoration: none;
+	color: white ;
+}
+
+nav a:hover { 
+	color: #00B1FF; 
+}
+
+
+
+nav a.active {
+	border-bottom: 2px solid white;
+    padding-bottom: 3px; 
+	
+  }
+
+
+ #wrapper0 {
+	background-color:transparent;
+	padding: 80px;
+	margin-bottom: 20px;
+	min-width: 300px;
+    max-width: 600px;
+	text-align: center;
+	padding-bottom: 100px;
+	/* border: 1px solid #bbb; */
+
+}
+
+#wrapper {
+	background-color:transparent;
+	padding: 20px;
+	margin-bottom: 20px;
+	min-width: 300px;
+    max-width: 300px;
+	height: 50px;
+	text-align: center;
+	padding-bottom: 100px;
+	/* border: 1px solid #bbb; */
+
+}
+
+#wrapper2 {
+	background-color: #2072AF;
+	padding: 10px;
+	margin: 10px 0px 0px 0px;
+} 
+
+#wrapper3 {
+	background-color: transparent;
+	padding: 20px;
+	margin-bottom: 20px;
+	min-width: 300px;
+    max-width: 600px;
+} 
+
+#wrapper3 h1 {
+	color: white;
+	font-size: 30px;
+	font-family: 'Montserrat', serif, sans-serif;
+}
+
+#wrapper3 p {
+	color: black;
+	font-size: 20px;
+}
+
+#wrapper4 {
+	background-color: transparent;
+	padding: 20px;
+	margin-bottom: 20px;
+	min-width: 300px;
+    max-width: 600px;
+} 
+
+#wrapper4 h1 {
+	color: white;
+	font-size: 33px;
+	font-family: 'Marcellus SC', serif, sans-serif;
+}
+
+#wrapper4 p {
+	color: black;
+	font-size: 20px;
+}
+
+#wrapper5 {
+	background-image: url('backimg2.png');
+	padding: 20px;
+	margin-top: 50px;
+	margin-right: auto;
+    margin-left: 20px;
+	width: 345px;
+	height: 500px;
+	text-align: center;
+	font-size: 13px;
+	background-repeat: no-repeat;
+    background-size: cover;
+	border-radius: 10px;
+
+}
+
+#wrapper6 {
+	background-color:white;
+	padding: 20px;
+	margin-top: 50px;
+	margin-right: 20px;
+    margin-left: auto;
+	min-width: 300px;
+    max-width: 600px;
+	height: 500px;
+	text-align: center;
+	
+}
+
+#wrapper7 {
+	background-color: transparent;
+	margin-left: 30px;
+} 
+
+#headerlog {
+	color: white;
+    font-family: Verdana, Arial, sans-serif;
+	text-align: left;
+}
+
+.input-line {
+	border: none;
+	background: none;
+	border-bottom: 1px solid black;
+	outline: none; /* Optional - removes the outline when the input is focused */
+  }
+
+
+button {
+	background-color: transparent;
+	color: rgb(255, 255, 255);
+	padding: 12px 24px;
+	border: 2 px white;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#button1 {
+	background-color: grey;
+	color: rgb(0, 0, 0);
+	padding: 12px 24px;
+	border: 2 px white;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 100px;
+}
+
+#logbutton{
+	background-color: black;
+	color: white;
+	position:absolute ;
+	right: 30;
+	top: 30;
+	border-radius: 100px;
+}
+
+
+footer {
+	position: relative;
+	float: right;
+	clear: both;
+	text-align: center;
+  }
+
+.footerabout {
+	position: relative;
+	float: right;
+	clear: both;
+	text-align: center;
+  }
+
+.footerabout footer {
+	position: absolute;
+	right: 0;
+	bottom: 30;
+  }
+
+.burger-image {
+	position: absolute;
+	margin-top: 50px;
+	margin-right: 100px;
+  }
