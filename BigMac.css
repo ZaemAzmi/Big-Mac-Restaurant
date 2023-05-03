@@ -50,6 +50,8 @@ hr {
     font-family: Verdana, Arial, sans-serif;
 	background-repeat: no-repeat;
     background-size: cover;
+	margin: 0;
+  	padding: 0;
 }
 
 body h2 {
@@ -132,15 +134,15 @@ nav a.active {
     max-width: 300px;
 	height: 50px;
 	text-align: center;
-	padding-bottom: 100px;
-	/* border: 1px solid #bbb; */
+	padding-bottom: 100px; 
 
 }
 
 #wrapper2 {
 	background-color: #2072AF;
 	padding: 10px;
-	margin: 10px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height: 450px;
 } 
 
 #wrapper3 {
@@ -149,6 +151,8 @@ nav a.active {
 	margin-bottom: 20px;
 	min-width: 300px;
     max-width: 600px;
+	height: 350px;
+	/* border: 1px solid #bbb; */
 } 
 
 #wrapper3 h1 {
@@ -168,6 +172,8 @@ nav a.active {
 	margin-bottom: 20px;
 	min-width: 300px;
     max-width: 600px;
+	height: 350px;
+	/* border: 1px solid #bbb; */
 } 
 
 #wrapper4 h1 {
@@ -280,6 +286,14 @@ nav a.active {
 	
 }
 
+#wrapper13 {
+	background-color: transparent;
+	position: absolute;
+	top: 90px;
+	right: 200px;
+	
+}
+
 
 .scrollable-text {
 	height: 200px; /* set the height of the container */
@@ -330,6 +344,17 @@ button {
 	margin-left: auto;
 }
 
+#savebut {
+	background-color: #00B1FF;
+	color: black;
+	padding: 12px 24px;
+	border: 2 px black;
+	border-radius: 100px;
+	cursor: pointer;
+	margin-right: auto;
+	margin-left: auto;
+}
+
 #button1 {
 	background-color: grey;
 	color: rgb(0, 0, 0);
@@ -371,21 +396,53 @@ footer {
 	text-align: center;
   }
 
-.footerabout {
+#footprof{
+	position: relative;
+	float: left;
+	clear: both;
+	text-align: center;
+	margin-bottom: 10px;
+  }
+
+/* #footerabout {
 	position: relative;
 	float: right;
 	clear: both;
 	text-align: center;
-  }
+  } */
 
-.footerabout footer {
+/* .footerabout footer {
 	position: absolute;
 	right: 0;
-	bottom: 30;
-  }
+	bottom: 0;
+  } */
 
 .burger-image {
 	position: absolute;
 	margin-top: 50px;
 	margin-right: 100px;
+  }
+
+  table {
+	background-color: white;
+	border-collapse: collapse;
+	width: 90%;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 10px;
+  }
+
+  .table-container {
+	margin-top: 40px;
+	width: 95%;
+	padding-bottom: 30px;
+	height: 70%; /* Set the desired height */
+	overflow: auto; /* Add scrollbar when table overflows */
+  }
+  
+  th, td {
+	padding: 8px;
+	color: black;
+	border: 1px solid grey;
   }
