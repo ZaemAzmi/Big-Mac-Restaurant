@@ -3,15 +3,14 @@
     <head>
         <meta charset ="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>
-            BigMac
-        </title>
+        <title>BigMac</title>
+        <link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
         <link rel="stylesheet" type="text/css" href="Style3.css">
     </head>
 
     <body>
         <header>
-            <img class="logo" src="C:\Users\luqmn\OneDrive - Universiti Malaya\DEGREE\Semester 4\WIF2003\BigMac\MenuPage\images\logoBigMac.png" alt="" width="60" height="40" class="d-inline-block align-text-top">
+            <img class="logo" src=".\images\logoBigMac.png" alt="" width="60" height="40" class="d-inline-block align-text-top">
         <nav> 
             <ul class="nav_links">
                     
@@ -76,12 +75,26 @@
                     </div>
 
                     <div class="form-row">
-                        <input type="submit"
-                        placeholder="next">
+                        <button onclick="window.location.href = 'table.html';" class="BtnSubmit">Table</button>
                     </div>
                 </form>
                 </div>
             </div>
+            <div>
+                <button onclick="window.location.href = 'table.html';">table</button>
+            </div>
+
+            
         </section>
     </body>
 </html>
+
+<!-- <input type="submit" class="BtnSubmit" value="Home" onclick="auth()" /> 
+                        <script>
+                            function auth(){
+                                window.location.href("table.html");
+                            } 
+                        </script> -->
+                        <!-- <form action ="table.html">
+                            <button type="submit" class="BtnSubmit">Submit</button>
+                        </form> --> 
