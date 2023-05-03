@@ -26,9 +26,23 @@ hr {
     background-size: cover;
 }
 
+#bodyhome header {
+	color: #00B1FF;
+	padding-left: 30px;
+	padding-top: 10px;
+	text-align: center;
+  }
+
 #bodyhome h2 {
 	color: #00B1FF;
   }
+
+#profile {
+	color: white;
+	position:absolute ;
+	right: 30;
+	top: 30;
+}
 
 #backabout {
     background-image: url('images/Backabout.png');
@@ -86,6 +100,17 @@ nav a.active {
 	
   }
 
+#profile-link {
+	display: flex;
+	align-items: center;
+	position:absolute ;
+	right: 30;
+	top: 30;
+  }
+
+#profile-link img {
+	margin-right: 5px; /* Optional - adds some spacing between the icon and text */
+  }
 
  #wrapper0 {
 	background-color:transparent;
@@ -223,6 +248,36 @@ nav a.active {
 	opacity: 0.8;
 }
 
+#wrapper11 {
+	background-color:white;
+	padding: 20px;
+	margin-top: 50px;
+	margin-right: 20px;
+    margin-left: auto;
+	min-width: 400px;
+    max-width: 800px;
+	height: 700px;
+	text-align: center;
+	opacity: 0.8;
+	border-radius: 10px;
+	
+}
+
+#wrapper12 {
+	background-color: black;
+	padding: 10px;
+	margin-top: 50px;
+	margin-bottom: auto;
+	margin-right: 20px;
+    margin-left: auto;
+	min-width: 200px;
+    max-width: 300px;
+	height: 250px;
+	text-align: center;
+	border-radius: 10px;
+	
+}
+
 
 .scrollable-text {
 	height: 200px; /* set the height of the container */
@@ -292,6 +347,18 @@ button {
 	right: 30;
 	top: 30;
 	border-radius: 100px;
+}
+
+#prodetails{
+color: white;
+text-align: left;
+font-size: 15px;
+}
+
+#title{
+color: #2196f3;
+font-size: 20px;
+padding-bottom: 10px;
 }
 
 
