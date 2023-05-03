@@ -2,7 +2,7 @@
 header, nav, main, button, footer { display: block; }
 
 .background-image {
-	background-image: url('backimg1.png');
+	background-image: url('/images/backimg1.png');
 	background-repeat: no-repeat;
     background-size: cover;
   }
@@ -19,7 +19,7 @@ hr {
 }
 
 #bodyhome {
-    background-image: url('background.png');
+    background-image: url('/images/background.png');
     color: #FFF;
     font-family: Verdana, Arial, sans-serif;
 	background-repeat: no-repeat;
@@ -31,7 +31,7 @@ hr {
   }
 
 #backabout {
-    background-image: url('Backabout.png');
+    background-image: url('/images/Backabout.png');
     color: #FFF;
     font-family: Verdana, Arial, sans-serif;
 	background-repeat: no-repeat;
@@ -47,7 +47,7 @@ body h2 {
 }
 
 #loginbody {
-	background-image: url('backimg1.png');
+	background-image: url('/images/backimg1.png');
 	background-size: cover;
 	background-position: center;
 	background-color: #2072AF;
@@ -60,7 +60,7 @@ body h2 {
 }
 
 nav {
-	background-image: url('BigMaclogo.png');
+	background-image: url('/images/BigMaclogo.png');
 	background-repeat: no-repeat;
 	text-align: center;
 	font-style: italic;
@@ -157,7 +157,7 @@ nav a.active {
 }
 
 #wrapper5 {
-	background-image: url('backimg2.png');
+	background-image: url('/images/backimg2.png');
 	padding: 20px;
 	margin-top: 50px;
 	margin-right: auto;
@@ -191,14 +191,14 @@ nav a.active {
 } 
 
 #wrapper9 {
-	background-color: black;
+	background-color: white;
 	padding: 20px;
 	margin-top: 50px;
 	margin-right: 20px;
     margin-left: auto;
 	min-width: 300px;
     max-width: 600px;
-	height: 500px;
+	height: 600px;
 	text-align: center;
 }
 
