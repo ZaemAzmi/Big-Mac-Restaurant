@@ -23,78 +23,58 @@
             </div> 
         </nav>
 
-        <a class="BtnLogin" href="#"><button>Login</button></a>
+        <button id="logbutton" onclick="location.href='Login.html'">Login</button>
         </header>
 
-        <section class="form">
+        <!-- Booking Section Start -->
+        <section class="formed">
             <h1>Reserve Your Spot </h1>
             <div class="form-container">
-                <div class="form-img">
+                <div class="form-img"></div>
 
-                </div>
                 <div class="form-content">
-                    <h3>Reservation</h3>
-                    <form>
-                    <div class="form-row">
-                        <select name="days">
-                            <option value="day-select">Select Day</option>
-                            <option value="day-select">Sunday</option>
-                            <option value="day-select">Monday</option>
-                            <option value="day-select">Tuesday</option>
-                            <option value="day-select">Wednesday</option>
-                            <option value="day-select">Thursday</option>
-                            <option value="day-select">Friday</option>
-                            <option value="day-select">Saturday</option>
-                        </select>
+                    
+                    <form action="#">
+                        <h3 class="heading">Reservation</h3>
 
-                        <select name="hours">
-                            <option value="hour-select">Select Hour</option>
-                            <option value="hour-select">1200H</option>
-                            <option value="hour-select">1300H</option>
-                            <option value="hour-select">1400H</option>
-                            <option value="hour-select">1500H</option>
-                            <option value="hour-select">1600H</option>
-                            <option value="hour-select">1700H</option>
-                        </select>
-                    </div>
+                        <div class="form-field">
+                            <p>Your Name</p>
+                            <input type="text" placeholder="Name">
+                        </div>
 
-                    <div class="form-row">
-                        <input type="text"
-                        placeholder="Full Name">
-                        <input type="number"
-                        placeholder="Phone Number">
-                        <input type="text"
-                        placeholder="Email">
-                    </div>
+                        <div class="form-field">
+                            <p>Your Email</p>
+                            <input type="email" placeholder="Email">
+                        </div>
 
-                    <div class="form-row">
-                        <input type="number"
-                        placeholder="Adult">
-                        <input type="number"
-                        placeholder="Kid">
-                    </div>
+                        <div class="form-field">
+                            <p>Date</p>
+                            <input type="date" >
+                        </div>
 
-                    <div class="form-row">
-                        <button onclick="window.location.href = 'table.html';" class="BtnSubmit">Table</button>
-                    </div>
+                        <div class="form-field">
+                            <p>Time</p>
+                            <input type="time" >
+                        </div>
+
+                        <div class="form-field">
+                            <p>How many pax?</p>
+                            <select name="select" id="#">
+                                <option value="1">1 Person</option>
+                                <option value="2">2 Person</option>
+                                <option value="3">3 Person</option>
+                                <option value="4">4 Person</option>
+                                <option value="5">5 Person</option>
+                                <option value="5+">5+ Person</option>
+                            </select>
+                        </div>
+
+                        <button class="BtnSubmit" onclick="window.location.href = 'table.html';">Submit</button>
                 </form>
                 </div>
-            </div>
-            <div>
-                <button onclick="window.location.href = 'table.html';">table</button>
             </div>
 
             
         </section>
     </body>
 </html>
-
-<!-- <input type="submit" class="BtnSubmit" value="Home" onclick="auth()" /> 
-                        <script>
-                            function auth(){
-                                window.location.href("table.html");
-                            } 
-                        </script> -->
-                        <!-- <form action ="table.html">
-                            <button type="submit" class="BtnSubmit">Submit</button>
-                        </form> --> 
