@@ -350,6 +350,7 @@ nav a.active {
 .input-line {
 	border: none;
 	background: none;
+	width: 50%;
 	border-bottom: 1px solid black;
 	outline: none; /* Optional - removes the outline when the input is focused */
 }
@@ -428,6 +429,7 @@ button:hover{
 
 #button2:hover{
     background-color: rgba(0, 3, 169, 0.8);
+	color: white;
 }
 
 #logbutton{
