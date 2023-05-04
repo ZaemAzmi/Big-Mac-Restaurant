@@ -366,11 +366,14 @@ button {
 	color: rgb(255, 255, 255);
 	padding: 12px 24px;
 	border: 2 px white;
-	border-radius: 4px;
 	cursor: pointer;
 	margin-right: auto;
 	margin-left: auto;
 }
+
+button:hover{
+    background-color: rgba(31, 31, 31, 0.8);
+  }
 
 #savebut {
 	background-color: #00B1FF;
@@ -384,7 +387,23 @@ button {
 }
 
 #button1 {
-	background-color: grey;
+	background-color: black;
+	color: rgb(255, 255, 255);
+	padding: 12px 24px;
+	border: 2 px white;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 100px;
+}
+
+#button1:hover{
+    background-color: rgba(0, 3, 169, 0.8);
+  }
+
+  #button2 {
+	background-color: white;
 	color: rgb(0, 0, 0);
 	padding: 12px 24px;
 	border: 2 px white;
@@ -394,6 +413,10 @@ button {
 	margin-left: auto;
 	border-radius: 100px;
 }
+
+#button2:hover{
+    background-color: rgba(0, 3, 169, 0.8);
+  }
 
 #logbutton{
 	background-color: black;
@@ -405,7 +428,7 @@ button {
 }
 
 #logbutton:hover{
-    background-color: rgba(0,1,169,0.8);
+    background-color: rgba(169, 0, 0, 0.8);
   }
 
 #prodetails{
