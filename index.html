@@ -1,75 +1,159 @@
 <html>
-	
-	<head>
-		<title>
-			BigMac Restaurant
-		</title>
 
-		<link rel="stylesheet" href="BigMac.css">
-		
+<head>
+	<title>
+		BigMac Restaurant
+	</title>
 
-	</head>
-	
+	<link rel="stylesheet" href="BigMac.css">
+	<script src="https://unpkg.com/scrollreveal"></script>
 
-	<body id="bodyhome">
-	
-		<nav>
-			<a href="index.html" class="active">Home</a> &nbsp; &nbsp;
-			<a href="About.html">About</a> &nbsp; &nbsp;
-			<a href="Booking.html">Booking</a> &nbsp; &nbsp;
-			<a href="Menu.html">Menu</a> &nbsp; &nbsp;
-			<button id="logbutton" onclick="location.href='Login.html'">Login</button>
-		</nav>
+</head>
+
+
+<body id="bodyhome">
+
+	<nav>
+		<a href="index.html" class="active">Home</a> &nbsp; &nbsp;
+		<a href="About.html">About</a> &nbsp; &nbsp;
+		<a href="Booking.html">Booking</a> &nbsp; &nbsp;
+		<a href="Menu.html">Menu</a> &nbsp; &nbsp;
+		<button id="logbutton" onclick="location.href='Login.html'">Login</button>
+	</nav>
 
 
 	<div id="wrapper0" style="display: inline-block; width: 50%; vertical-align: top;">
-	<header>
-		<h1> 
-			WELCOME TO BIGMAC RESTAURANT !
-		</h1>
-	</header>
+		<header>
+			<h1>
+				WELCOME TO BIGMAC RESTAURANT !
+			</h1>
+		</header>
 
 
 		<main>
-			
-		<hr>
 
-		<h2> 
-			Crafting Burgers to Perfection
-		</h2>
+			<hr>
 
-		<p>
-			We're excited to share our love of burgers with you. 
-			Here, you'll find our menu of delicious creations, each 
-			made with the freshest ingredients and our unique touch. 
-			Whether you're a burger fanatic or simply curious, 
-			we invite you to explore and discover 
-			why Bigmac Specialties is the ultimate burger destination.
-		</p>
+			<h2>
+				Crafting Burgers to Perfection
+			</h2>
 
-	
-	</main> 
-</div>
+			<p>
+				We're excited to share our love of burgers with you.
+				Here, you'll find our menu of delicious creations, each
+				made with the freshest ingredients and our unique touch.
+				Whether you're a burger fanatic or simply curious,
+				we invite you to explore and discover
+				why Bigmac Specialties is the ultimate burger destination.
+			</p>
 
-<div id="wrapper" style="display: inline-block; width: 50%; vertical-align: top;">
-<img src="images/Burger.png" alt="burger" class="burger-image" width="550" height="500">
-</div>
 
-	<div id ="wrapper7">
-		<img src="images/fblogo.png" alt="fblogo" align="left" width="50" height="50"><br> &nbsp; &nbsp;BigMac <br><br><br> 
-		<img src="images/instalogo.png" alt="instalogo" align="left" width="50" height="50"><br> &nbsp; &nbsp;@BigMacRestaurant <br><br><br> 
-		<img src="images/twitterlogo.png" alt="twitterlogo" align="left" width="50" height="50"><br> &nbsp; &nbsp;@BigMacRestaurant <br><br><br>  
+		</main>
+	</div>
+	<div id="wrapper" style="display: inline-block; width: 50%; vertical-align: top;">
+		<img src="images/Burger.png" alt="burger" class="burger-image" width="550" height="500">
 	</div>
 
-	
-		<footer>
-			Copyright © 2023 BigMac Restaurant
-		 <br>
-		<em><a href = "mailto:BigMac@gmail.com">BigMac@gmail.com</a></em>
-		</footer>
+	<section class="sec-01">
+		<div class="container-left">
+			<h2 class="main-title">Test reveal</h2>
+			<div class="content">
+				<div class="image">
+					<img src="indexImg/img1.jpg" alt="">
+				</div>
+				<div class="text-box-right">
+					<h3>Lorem ipsum</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						 sed do eiusmod tempor incididunt ut labore et dolore magna 
+						 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+						 ullamco laboris
+					</p>
+				</div>
+			</div>
+			<!-- <div class="media-icons">
+			<a href=""
+		</div> -->
+		</div>
+	</section>
+	<section class="sec-02">
+		<div class="container-right">
+			<h3 class="section-title">Lorem ippsunn</h3>
+			<div class="content">
+				<div class="image">
+					<img src="indexImg/img2.jpg" alt="">
+
+				</div>
+				<div class="text-box-left">
+					<h4 class="info-title">description</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						 sed do eiusmod tempor incididunt ut labore et dolore magna 
+						 aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+						 ullamco laboris
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="sec-03">
+		<div class="container-left">
+			<h3 class="section-title">Lorem ipsum 3</h3>
+			<div class="content">
+				<div class="image">
+					<img src="indexImg/img3.jpg" alt="">
+
+				</div>
+				<div class="text-box-right">
+					<h4 class="info-title">description</h4>
+					<p>
+						afafsa aeasfasf a sfa f
+						afas asfaf afa f afaf a fasf a sf
+						a fafsfa sf asfa sf a af af asfa\n af af
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script>
+		ScrollReveal({
+			reset: true,
+			distance: '60px',
+			duration: 2500,
+			delay: 400,
+			cleanup:true
+		});
+
+		ScrollReveal().reveal('.main-title, .section-title', { delay: 750, origin:'left',viewFactor:0.5 });
+		ScrollReveal().reveal('.sec-01, .image, info', { delay: 750, origin:'bottom',viewFactor: 0.5 });
+		ScrollReveal().reveal('.text-box-right', { delay: 750, origin:'right',viewFactor: 0.5 });
+		ScrollReveal().reveal('.sec-02, .image', { delay: 750, origin:'top',viewFactor: 0.5});
+		ScrollReveal().reveal('.text-box-left',{ delay: 750, origin:'left',viewFactor:0.5});
+		ScrollReveal().reveal('.sec-03, .image', { delay: 750, origin:'bottom',viewFactor: 0.5});
 
 
+	</script>
+
 	
+	<div id="wrapper7">
+		<img src="images/fblogo.png" alt="fblogo" align="left" width="50" height="50"><br> &nbsp; &nbsp;BigMac
+		<br><br><br>
+		<img src="images/instalogo.png" alt="instalogo" align="left" width="50" height="50"><br> &nbsp;
+		&nbsp;@BigMacRestaurant <br><br><br>
+		<img src="images/twitterlogo.png" alt="twitterlogo" align="left" width="50" height="50"><br> &nbsp;
+		&nbsp;@BigMacRestaurant <br><br><br>
+	</div>
+
+
+	<footer>
+		Copyright © 2023 BigMac Restaurant
+		<br>
+		<em><a href="mailto:BigMac@gmail.com">BigMac@gmail.com</a></em>
+	</footer>
+
+
+
 
 </body>
 
