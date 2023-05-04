@@ -1,0 +1,134 @@
+@import url(https://fonts.googleapis.com/css?family=Literata&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
+
+:root{
+    --main-color: #219ebc;
+    --black: #13131a;
+    --bg: #010103;
+    --altbg: #e5e5e5;
+    --border: .1rem solid rgba(255,255,255,.3);
+  }
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+  }
+
+  body{
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  }
+
+  html{
+    font-size: 100%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+  
+  }
+  html::-webkit-scrollbar{
+    width: .3rem;
+  }
+  
+  html::-webkit-scrollbar-track{
+    background: transparent;
+  }
+  
+  html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+  }
+
+  .table{
+    width: 100%;
+  }
+
+  .table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(240,240,240);
+    
+  }
+
+  .table-header p{
+    color: black;
+  }
+
+  button {
+    border-radius: .4rem;
+    cursor: pointer;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+  }
+
+  td button:nth-child(1){
+    background-color: var(--main-color);
+  }
+  td button:nth-child(2){
+    background-color: #d90429;
+  }
+
+  .add-new{
+    padding: 10px 20px;
+    color: #fff;
+    background-color: var(--main-color);
+  }
+
+  input{
+    padding: 10px 20px;
+    margin: 0px 10px;
+    border-radius: .8rem;
+    border: 1px solid var(--main-color);
+  }
+
+  .table-section{
+    height: 650px;
+    overflow: auto;
+  }
+
+  table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px;
+    border-collapse: collapse;
+
+  }
+
+  thead th{
+    position: sticky;
+    top: 0;
+    background-color: var(--bg);
+    color: #fff;
+    font-size: 1rem;
+  }
+
+  th, td{
+    border-bottom:1px solid #219ebc;
+    padding: 10px 20px;
+    /* word-break: break-all; */
+    text-align: center;
+  }
+
+  td img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: .8rem;
+  }
+
+  tr:hover td{
+    color: var(--main-color);
+    cursor: pointer;
+    background-color: var(--altbg);
+  }
+
+  ::placeholder{
+    color: var(--main-color);
+  }
