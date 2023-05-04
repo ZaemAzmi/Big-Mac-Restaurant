@@ -94,8 +94,6 @@ nav a:hover {
 	color: #00B1FF; 
 }
 
-
-
 nav a.active {
 	border-bottom: 2px solid white;
     padding-bottom: 3px; 
@@ -132,7 +130,7 @@ nav a.active {
 	margin-bottom: 20px;
 	min-width: 300px;
     max-width: 300px;
-	height: 50px;
+	height: 100px;
 	text-align: center;
 	padding-bottom: 100px; 
 
@@ -188,18 +186,19 @@ nav a.active {
 }
 
 #wrapper5 {
-	background-image: url('images/backimg2.png');
-	padding: 20px;
+	background-image: url('images/backimg3.jpg');
+	color: black;
+	padding: 30px;
 	margin-top: 50px;
 	margin-right: auto;
     margin-left: 20px;
-	width: 345px;
+	width: 300px;
 	height: 500px;
 	text-align: center;
 	font-size: 13px;
 	background-repeat: no-repeat;
     background-size: cover;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 
 }
 
@@ -222,6 +221,14 @@ nav a.active {
 } 
 
 #parent-container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: transparent;
+	text-align: center;
+  }
+
+  #parent-container1 {
 	width: 100%;
 	max-width: 1600px;
 	margin: 0 auto;
@@ -253,6 +260,7 @@ nav a.active {
 	border-radius: 10px;
 	opacity: 0.8; 
 }
+
 
 #wrapper11 {
 	background-image: url('images/v28_270.png');
@@ -294,6 +302,17 @@ nav a.active {
 	
 }
 
+#wrapper14 {
+	background-color: transparent;
+	width: 350px;
+	height: 200px;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	justify-content: center;
+	
+}
+
 
 .scrollable-text {
 	height: 200px; /* set the height of the container */
@@ -304,8 +323,17 @@ nav a.active {
 #headerlog {
 	color: white;
     font-family: Verdana, Arial, sans-serif;
-	text-align: left;
+	text-align: center;
+
 }
+
+#headerlog h1{
+	background-color: black;
+	width: max-content;
+	margin: 0 auto;
+
+}
+
 
 .input-line {
 	border: none;
@@ -338,11 +366,14 @@ button {
 	color: rgb(255, 255, 255);
 	padding: 12px 24px;
 	border: 2 px white;
-	border-radius: 4px;
 	cursor: pointer;
 	margin-right: auto;
 	margin-left: auto;
 }
+
+button:hover{
+    background-color: rgba(31, 31, 31, 0.8);
+  }
 
 #savebut {
 	background-color: #00B1FF;
@@ -356,7 +387,23 @@ button {
 }
 
 #button1 {
-	background-color: grey;
+	background-color: black;
+	color: rgb(255, 255, 255);
+	padding: 12px 24px;
+	border: 2 px white;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 100px;
+}
+
+#button1:hover{
+    background-color: rgba(0, 3, 169, 0.8);
+  }
+
+  #button2 {
+	background-color: white;
 	color: rgb(0, 0, 0);
 	padding: 12px 24px;
 	border: 2 px white;
@@ -367,6 +414,10 @@ button {
 	border-radius: 100px;
 }
 
+#button2:hover{
+    background-color: rgba(0, 3, 169, 0.8);
+  }
+
 #logbutton{
 	background-color: black;
 	color: white;
@@ -375,6 +426,10 @@ button {
 	top: 30;
 	border-radius: 100px;
 }
+
+#logbutton:hover{
+    background-color: rgba(169, 0, 0, 0.8);
+  }
 
 #prodetails{
 color: white;
@@ -447,7 +502,21 @@ footer {
 	border: 1px solid grey;
   }
 
-   #chooseicon {
+  label {
+	align-items: center;
+	width: 80%;
+	height: 80%;
+	margin: 5px;
+	text-align: center;
+  }
+
+
+  #choose{
+	background-color: black;
+	
+	  }
+
+   /* #chooseicon {
 	background-color: white;
 	display: flex;
   	flex-wrap: wrap;
@@ -484,4 +553,31 @@ footer {
   
   input[type="radio"]:checked + label img {
 	border-color: blue;
+  } */
+
+
+  .slider {
+	position: relative;
+	width: 550px;
+	height: 500px;
+	overflow: hidden;
+  }
+  
+  .slider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img:last-of-type {
+	transform: translateX(100%);
+  }
+  
+  .slider.active img:first-of-type {
+	transform: translateX(-100%);
+  }
+  
+  .slider.active img:last-of-type {
+	transform: translateX(0);
   }
