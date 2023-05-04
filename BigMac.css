@@ -446,3 +446,42 @@ footer {
 	color: black;
 	border: 1px solid grey;
   }
+
+   #chooseicon {
+	background-color: white;
+	display: flex;
+  	flex-wrap: wrap;
+	text-align: center;
+  	width: 30px;
+  	height: 50px;
+  	border: 2px solid white;
+  	border-radius: 5px;
+  	padding: 5px;
+  	box-sizing: border-box;
+	
+  }
+  
+  input[type="radio"] {
+	display: none;
+  }
+  
+  label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+  }
+  
+  label img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 2px solid transparent;
+  }
+  
+  input[type="radio"]:checked + label img {
+	border-color: blue;
+  }
