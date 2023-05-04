@@ -317,7 +317,7 @@ nav a.active {
 .scrollable-text {
 	height: 200px; /* set the height of the container */
 	overflow: auto; /* make the container scrollable */
-  }
+}
 
 
 #headerlog {
@@ -340,9 +340,9 @@ nav a.active {
 	background: none;
 	border-bottom: 1px solid black;
 	outline: none; /* Optional - removes the outline when the input is focused */
-  }
+}
 
-  .input-line1 {
+.input-line1 {
 	display: block;
 	width: 80%;
 	padding: 10px;
@@ -353,12 +353,12 @@ nav a.active {
 	border: none;
 	border-bottom: 1px solid #ccc;
 	box-sizing: border-box;
-  }
+}
   
-  .input-line1:focus {
+.input-line1:focus {
 	outline: none;
 	border-bottom-color: #2196f3;
-  }
+}
 
 
 button {
@@ -373,7 +373,7 @@ button {
 
 button:hover{
     background-color: rgba(31, 31, 31, 0.8);
-  }
+}
 
 #savebut {
 	background-color: #00B1FF;
@@ -416,7 +416,7 @@ button:hover{
 
 #button2:hover{
     background-color: rgba(0, 3, 169, 0.8);
-  }
+}
 
 #logbutton{
 	background-color: black;
