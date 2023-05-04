@@ -188,18 +188,19 @@ nav a.active {
 }
 
 #wrapper5 {
-	background-image: url('images/backimg2.png');
-	padding: 20px;
+	background-image: url('images/backimg3.jpg');
+	color: black;
+	padding: 30px;
 	margin-top: 50px;
 	margin-right: auto;
     margin-left: 20px;
-	width: 345px;
+	width: 300px;
 	height: 500px;
 	text-align: center;
 	font-size: 13px;
 	background-repeat: no-repeat;
     background-size: cover;
-	border-radius: 10px;
+	/* border-radius: 10px; */
 
 }
 
@@ -222,6 +223,14 @@ nav a.active {
 } 
 
 #parent-container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: transparent;
+	text-align: center;
+  }
+
+  #parent-container1 {
 	width: 100%;
 	max-width: 1600px;
 	margin: 0 auto;
@@ -253,6 +262,7 @@ nav a.active {
 	border-radius: 10px;
 	opacity: 0.8; 
 }
+
 
 #wrapper11 {
 	background-image: url('images/v28_270.png');
@@ -294,6 +304,17 @@ nav a.active {
 	
 }
 
+#wrapper14 {
+	background-color: transparent;
+	width: 350px;
+	height: 200px;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	justify-content: center;
+	
+}
+
 
 .scrollable-text {
 	height: 200px; /* set the height of the container */
@@ -304,8 +325,17 @@ nav a.active {
 #headerlog {
 	color: white;
     font-family: Verdana, Arial, sans-serif;
-	text-align: left;
+	text-align: center;
+
 }
+
+#headerlog h1{
+	background-color: black;
+	width: max-content;
+	margin: 0 auto;
+
+}
+
 
 .input-line {
 	border: none;
@@ -447,7 +477,21 @@ footer {
 	border: 1px solid grey;
   }
 
-   #chooseicon {
+  label {
+	align-items: center;
+	width: 80%;
+	height: 80%;
+	margin: 5px;
+	text-align: center;
+  }
+
+
+  #choose{
+	background-color: black;
+	
+	  }
+
+   /* #chooseicon {
 	background-color: white;
 	display: flex;
   	flex-wrap: wrap;
@@ -484,4 +528,4 @@ footer {
   
   input[type="radio"]:checked + label img {
 	border-color: blue;
-  }
+  } */
