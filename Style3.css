@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Literata&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
 
+
+
 /* Main setting start*/
 :root{
   --main-color: #219ebc;
@@ -117,23 +119,6 @@ body{
 
   } */
 
-  #logbutton{
-    background-color: var(--main-color);
-    color: white;
-    position:absolute ;
-    margin-right: 5%;
-    border-radius: 100px;
-
-    margin-left: 70%;
-    border: none;
-    padding :9px 25px;
-    cursor:pointer;
-    transition: all 0.3s ease 0s;
-  }
-  #logbutton:hover{
-    background-color: rgba(0,1,169,0.8);
-  }
-
   #submitbutton{
     background-color: var(--main-color);
     color: white;
@@ -145,9 +130,6 @@ body{
     background-color: rgba(0,1,169,0.8);
   }
 
-  button :hover{
-    background-color: rgba(0,1,169,0.8);
-  }
 
   .item{
     display: block;
@@ -377,6 +359,62 @@ body{
   font-size: 2.5rem;
   padding: .5rem 0;
 }
+
+nav {
+	background-image: url('images/BigMaclogo.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-style: italic;
+	margin-top: 30px;
+	height: 55px;
+	padding-bottom: 5px;
+}
+  
+nav a {
+  font-family: Verdana, Arial, sans-serif;
+	text-decoration: none;
+	color: white ;
+}
+
+nav a:hover { 
+	color: #00B1FF; 
+}
+
+nav a.active {
+	border-bottom: 2px solid white;
+    padding-bottom: 3px; 
+	
+}
+
+#logbutton{
+	background-color: black;
+	color: white;
+	position:absolute ;
+	right: 30;
+	top: 30;
+	border-radius: 100px;
+  margin-left: 500px;
+}
+
+#logbutton:hover{
+    background-color: rgba(169, 0, 0, 0.8);
+  }
+
+  button {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    padding: 12px 24px;
+    border: 2 px white;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  button:hover{
+      background-color: rgba(31, 31, 31, 0.8);
+  }
+
+  
 
 /* Menu Section End */
 
