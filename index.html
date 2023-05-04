@@ -52,36 +52,11 @@
 </div>
 
 <div id="wrapper" style="display: inline-block; width: 50%; vertical-align: top;">
-	<div class="slider" style="height: 550px;">
 	  <img src="images/Burger.png" alt="burger" class="burger-image" width="550" height="500">
-	  <img src="images/pizza.png" alt="pizza" class="burger-image" width="550" height="500">
 	  
 	</div>
   </div>
-  
-  <script>
-	var slider = document.querySelector('.slider');
-	var images = document.querySelectorAll('.slider img');
 
-	var currentImage = 0;
-
-	setInterval(function() {
- 	 	currentImage++;
-  		if (currentImage >= images.length) {
-   		currentImage = 0;
-  	}
-  		slider.classList.remove('active');
-  		setTimeout(function() {
-    	images[currentImage].parentNode.classList.add('active');
-    	if (currentImage === images.length - 1) {
-      		setTimeout(function() {
-        	images[0].parentNode.classList.add('active');
-        	currentImage = 0;
-      	}, 1000);
-    	}
-  		}, 100);
-		}, 3000);
-  </script>
 
 	<div id ="wrapper7">
 		<img src="images/fblogo.png" alt="fblogo" align="left" width="50" height="50"><br> &nbsp; &nbsp;BigMac <br><br><br> 
