@@ -126,15 +126,29 @@ nav a.active {
 
 #wrapper {
 	background-color:transparent;
+	position: relative;
 	padding: 20px;
+	margin-left: 100px;
 	margin-bottom: 20px;
 	min-width: 300px;
-    max-width: 300px;
+    max-width: 500px;
 	height: 100px;
 	text-align: center;
 	padding-bottom: 100px; 
 
 }
+
+#wrapper img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+  }
+  
+  #wrapper img:first-child {
+	opacity: 1;
+  }
 
 #wrapper2 {
 	background-color: #2072AF;
@@ -305,9 +319,7 @@ nav a.active {
 #wrapper14 {
 	background-color: transparent;
 	width: 350px;
-	height: 250px;
-	position: absolute;
-	bottom: 10px;
+	height: 150px;
 	text-align: center;
 	justify-content: center;
 	

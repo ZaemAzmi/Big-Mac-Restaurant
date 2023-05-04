@@ -7,6 +7,7 @@
 
 		<link rel="stylesheet" href="BigMac.css">
 		<link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 	</head>
 	
@@ -50,12 +51,25 @@
 	
 	</main> 
 </div>
-
 <div id="wrapper" style="display: inline-block; width: 50%; vertical-align: top;">
 	  <img src="images/Burger.png" alt="burger" class="burger-image" width="550" height="500">
+	  <img src="images/pizza.png" alt="burger" class="burger-image" width="550" height="500">
+	  <img src="images/spolio.png" alt="burger" class="burger-image" width="550" height="500">
+	  <img src="images/Burger2.png" alt="burger" class="burger-image" width="550" height="500">
+	  <img src="images/pizza2.png" alt="burger" class="burger-image" width="550" height="500">
 	  
 	</div>
-  </div>
+
+	<script>$(document).ready(function() {
+		var images = ['#wrapper img:nth-child(1)', '#wrapper img:nth-child(2)', '#wrapper img:nth-child(3)', '#wrapper img:nth-child(4)', '#wrapper img:nth-child(5)'];
+		var currentIndex = 0;
+		var intervalId = setInterval(function() {
+		  $(images[currentIndex]).animate({opacity: 0}, 500, function() {
+			currentIndex = (currentIndex + 1) % images.length;
+			$(images[currentIndex]).animate({opacity: 1}, 500);
+		  });
+		}, 10000);
+	  });</script>
 
 
 	<div id ="wrapper7">
