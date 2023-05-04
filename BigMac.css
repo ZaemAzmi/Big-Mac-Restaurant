@@ -2,7 +2,7 @@
 header, nav, main, button, footer { display: block; }
 
 .background-image {
-	background-image: url('backimg1.png');
+	background-image: url('images/backimg1.png');
 	background-repeat: no-repeat;
     background-size: cover;
   }
@@ -19,23 +19,39 @@ hr {
 }
 
 #bodyhome {
-    background-image: url('background.png');
+    background-image: url('images/background.png');
     color: #FFF;
     font-family: Verdana, Arial, sans-serif;
 	background-repeat: no-repeat;
     background-size: cover;
 }
 
+#bodyhome header {
+	color: #00B1FF;
+	padding-left: 30px;
+	padding-top: 10px;
+	text-align: center;
+  }
+
 #bodyhome h2 {
 	color: #00B1FF;
   }
 
+#profile {
+	color: white;
+	position:absolute ;
+	right: 30;
+	top: 30;
+}
+
 #backabout {
-    background-image: url('Backabout.png');
+    background-image: url('images/Backabout.png');
     color: #FFF;
     font-family: Verdana, Arial, sans-serif;
 	background-repeat: no-repeat;
     background-size: cover;
+	margin: 0;
+  	padding: 0;
 }
 
 body h2 {
@@ -47,7 +63,7 @@ body h2 {
 }
 
 #loginbody {
-	background-image: url('backimg1.png');
+	background-image: url('images/backimg1.png');
 	background-size: cover;
 	background-position: center;
 	background-color: #2072AF;
@@ -60,7 +76,7 @@ body h2 {
 }
 
 nav {
-	background-image: url('BigMaclogo.png');
+	background-image: url('images/BigMaclogo.png');
 	background-repeat: no-repeat;
 	text-align: center;
 	font-style: italic;
@@ -86,6 +102,17 @@ nav a.active {
 	
   }
 
+#profile-link {
+	display: flex;
+	align-items: center;
+	position:absolute ;
+	right: 30;
+	top: 30;
+  }
+
+#profile-link img {
+	margin-right: 5px; /* Optional - adds some spacing between the icon and text */
+  }
 
  #wrapper0 {
 	background-color:transparent;
@@ -107,15 +134,15 @@ nav a.active {
     max-width: 300px;
 	height: 50px;
 	text-align: center;
-	padding-bottom: 100px;
-	/* border: 1px solid #bbb; */
+	padding-bottom: 100px; 
 
 }
 
 #wrapper2 {
 	background-color: #2072AF;
 	padding: 10px;
-	margin: 10px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height: 450px;
 } 
 
 #wrapper3 {
@@ -124,6 +151,8 @@ nav a.active {
 	margin-bottom: 20px;
 	min-width: 300px;
     max-width: 600px;
+	height: 350px;
+	/* border: 1px solid #bbb; */
 } 
 
 #wrapper3 h1 {
@@ -143,6 +172,8 @@ nav a.active {
 	margin-bottom: 20px;
 	min-width: 300px;
     max-width: 600px;
+	height: 350px;
+	/* border: 1px solid #bbb; */
 } 
 
 #wrapper4 h1 {
@@ -157,7 +188,7 @@ nav a.active {
 }
 
 #wrapper5 {
-	background-image: url('backimg2.png');
+	background-image: url('images/backimg2.png');
 	padding: 20px;
 	margin-top: 50px;
 	margin-right: auto;
@@ -190,6 +221,86 @@ nav a.active {
 	margin-left: 30px;
 } 
 
+#parent-container {
+	width: 100%;
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: transparent;
+	text-align: center;
+  }
+
+#parent-container main{
+	color: white;
+}
+
+#parent-container p{
+	color: white;
+	font-size: 20px;
+	text-align: center;
+}
+
+#wrapper9 {
+	background-color: black;
+	padding: 20px;
+	margin-top: 50px;
+	margin-right: 20px;
+    margin-left: auto;
+	min-width: 200px;
+    max-width: 400px;
+	height: 500px;
+	text-align: left;
+	display: block;
+	border-radius: 10px;
+	opacity: 0.8; 
+}
+
+#wrapper11 {
+	background-image: url('images/v28_270.png');
+	background-repeat: no-repeat;
+    background-size: cover;
+	padding: 20px;
+	margin-top: 50px;
+	margin-right: 20px;
+    margin-left: auto;
+	min-width: 400px;
+    max-width: 800px;
+	height: 670px;
+	text-align: center;
+	border-radius: 10px;
+	
+}
+
+#wrapper12 {
+	background-color: black;
+	padding: 10px;
+	margin-top: 50px;
+	margin-bottom: auto;
+	margin-right: 20px;
+    margin-left: auto;
+	min-width: 200px;
+    max-width: 300px;
+	height: 250px;
+	text-align: center;
+	border-radius: 10px;
+	opacity: 0.9;
+	
+}
+
+#wrapper13 {
+	background-color: transparent;
+	position: absolute;
+	top: 90px;
+	right: 200px;
+	
+}
+
+
+.scrollable-text {
+	height: 200px; /* set the height of the container */
+	overflow: auto; /* make the container scrollable */
+  }
+
+
 #headerlog {
 	color: white;
     font-family: Verdana, Arial, sans-serif;
@@ -203,6 +314,24 @@ nav a.active {
 	outline: none; /* Optional - removes the outline when the input is focused */
   }
 
+  .input-line1 {
+	display: block;
+	width: 80%;
+	padding: 10px;
+	font-size: 16px;
+	line-height: 0.8;
+	color: white;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	box-sizing: border-box;
+  }
+  
+  .input-line1:focus {
+	outline: none;
+	border-bottom-color: #2196f3;
+  }
+
 
 button {
 	background-color: transparent;
@@ -210,6 +339,17 @@ button {
 	padding: 12px 24px;
 	border: 2 px white;
 	border-radius: 4px;
+	cursor: pointer;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#savebut {
+	background-color: #00B1FF;
+	color: black;
+	padding: 12px 24px;
+	border: 2 px black;
+	border-radius: 100px;
 	cursor: pointer;
 	margin-right: auto;
 	margin-left: auto;
@@ -236,6 +376,18 @@ button {
 	border-radius: 100px;
 }
 
+#prodetails{
+color: white;
+text-align: left;
+font-size: 20px;
+}
+
+#title{
+color: #2196f3;
+font-size: 20px;
+padding-bottom: 10px;
+}
+
 
 footer {
 	position: relative;
@@ -244,21 +396,92 @@ footer {
 	text-align: center;
   }
 
-.footerabout {
+#footprof{
+	position: relative;
+	float: left;
+	clear: both;
+	text-align: center;
+	margin-bottom: 10px;
+  }
+
+/* #footerabout {
 	position: relative;
 	float: right;
 	clear: both;
 	text-align: center;
-  }
+  } */
 
-.footerabout footer {
+/* .footerabout footer {
 	position: absolute;
 	right: 0;
-	bottom: 30;
-  }
+	bottom: 0;
+  } */
 
 .burger-image {
 	position: absolute;
 	margin-top: 50px;
 	margin-right: 100px;
+  }
+
+  table {
+	background-color: white;
+	border-collapse: collapse;
+	width: 90%;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 10px;
+  }
+
+  .table-container {
+	margin-top: 40px;
+	width: 95%;
+	padding-bottom: 30px;
+	height: 70%; /* Set the desired height */
+	overflow: auto; /* Add scrollbar when table overflows */
+  }
+  
+  th, td {
+	padding: 8px;
+	color: black;
+	border: 1px solid grey;
+  }
+
+   #chooseicon {
+	background-color: white;
+	display: flex;
+  	flex-wrap: wrap;
+	text-align: center;
+  	width: 30px;
+  	height: 50px;
+  	border: 2px solid white;
+  	border-radius: 5px;
+  	padding: 5px;
+  	box-sizing: border-box;
+	
+  }
+  
+  input[type="radio"] {
+	display: none;
+  }
+  
+  label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+  }
+  
+  label img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	border: 2px solid transparent;
+  }
+  
+  input[type="radio"]:checked + label img {
+	border-color: blue;
   }
