@@ -404,6 +404,10 @@ button {
 	border-radius: 100px;
 }
 
+#logbutton:hover{
+    background-color: rgba(0,1,169,0.8);
+  }
+
 #prodetails{
 color: white;
 text-align: left;
