@@ -130,7 +130,7 @@ nav a.active {
 	margin-bottom: 20px;
 	min-width: 300px;
     max-width: 300px;
-	height: 50px;
+	height: 100px;
 	text-align: center;
 	padding-bottom: 100px; 
 
@@ -554,3 +554,30 @@ footer {
   input[type="radio"]:checked + label img {
 	border-color: blue;
   } */
+
+
+  .slider {
+	position: relative;
+	width: 550px;
+	height: 500px;
+	overflow: hidden;
+  }
+  
+  .slider img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider img:last-of-type {
+	transform: translateX(100%);
+  }
+  
+  .slider.active img:first-of-type {
+	transform: translateX(-100%);
+  }
+  
+  .slider.active img:last-of-type {
+	transform: translateX(0);
+  }
