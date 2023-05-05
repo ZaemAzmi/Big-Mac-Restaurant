@@ -57,7 +57,7 @@ nav {
 	text-align: center;
 	font-style: italic;
 	margin-top: 30px;
-	height: 50px;
+	height: 55px;
 	padding-bottom: 5px;
 }
   
@@ -80,9 +80,11 @@ nav a.active {
     background-color: black;
     color: white;
     position:absolute ;
+    padding: 12px 24px;
     right: 30;
     top: 30;
     border-radius: 100px;
+    margin-left: 430px;
   }
   
   #logbutton:hover{
