@@ -66,42 +66,54 @@ body{
     cursor: pointer;
   }
 
-  .nav_links {
-    list-style: none;
+  nav {
+    background-image: url('images/BigMaclogo.png');
+    background-repeat: no-repeat;
+    text-align: center;
+    font-style: italic;
+    margin-top: 30px;
+    height: 50px;
+    padding-bottom: 5px;
   }
-
-  .nav_links li{
-    display: inline-block;
-    padding: 0px 20px;
+    
+  nav a {
+    font-family: Verdana, Arial, sans-serif;
+    text-decoration: none;
+    color: white ;
   }
-
-  .nav_links li a{
-    transition: all 0.3s ease 0s;
+  
+  nav a:hover { 
+    color: #00B1FF; 
   }
-
-  .nav_links li a:hover{
-    color: #0088a9;
-  }
+  
+  nav a.active {
+    border-bottom: 2px solid white;
+      padding-bottom: 3px; 
+    
+    }
 
   .BtnLogin{
     align-content: space-between;
   }
 
   #logbutton{
-    background-color: var(--main-color);
+    font-family: Verdana, Arial, sans-serif;
+    background-color: black;
     color: white;
     position:absolute ;
-    margin-right: 5%;
+    right: 30;
+    top: 30;
+
     border-radius: 100px;
   
-    margin-left: 70%;
-    border: none;
+    margin-left: 500px;
     padding :9px 25px;
     cursor:pointer;
     transition: all 0.3s ease 0s;
   }
+
   #logbutton:hover{
-    background-color: rgba(0,1,169,0.8);
+    background-color: rgba(169, 0, 0, 0.8);
   }
   /* Nav Bar End */
 

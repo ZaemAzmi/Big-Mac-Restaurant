@@ -437,6 +437,7 @@ nav a.active {
 
 #logbutton{
 	background-color: black;
+  font-family: Verdana, Arial, sans-serif;
 	color: white;
 	position:absolute ;
 	right: 30;
