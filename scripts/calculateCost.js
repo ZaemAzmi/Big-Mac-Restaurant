@@ -7,12 +7,12 @@ class Food{
 }
 
 const food=[
-    new Food(0, "Crunchy Soft Shell Crab Burger", 35.00),
-    new Food(1, "Margherita Pizza", 23.00),
-    new Food(2, "Grilled Soft Shell Crab Sandwiches", 25.00),
-    new Food(3, "Grilled Salmon Steak", 30.00),
-    new Food(4, "Southern Fried Chicken Burger", 20.00),
-    new Food(5, "Wagyu Beef Croza", 56.00)
+    new Food("CSSCB", "Crunchy Soft Shell Crab Burger", 35.00),
+    new Food("MP", "Margherita Pizza", 23.00),
+    new Food("GSSCS", "Grilled Soft Shell Crab Sandwiches", 25.00),
+    new Food("GSS", "Grilled Salmon Steak", 30.00),
+    new Food("SFCB", "Southern Fried Chicken Burger", 20.00),
+    new Food("WBC", "Wagyu Beef Croza", 56.00)
 ];
 
 var prices = document.querySelectorAll(".price");
@@ -21,7 +21,6 @@ var cost=0;
 
 for(var i=0; i<btnAddCart.length; i++){
     
-
     btnAddCart[i].addEventListener("click", function(event){
         var btnClicked=event.target;
         var code = btnClicked.getAttribute("id");
