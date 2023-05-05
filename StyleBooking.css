@@ -39,9 +39,24 @@ html::-webkit-scrollbar-thumb{
   border-radius: 5rem;
 }
 
-body{
-    background: var(--bg);
-  }
+#bodyhome {
+  background-image: url('images/background.png');
+  color: var(--black);
+  font-family: Verdana, Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bodyhome header {
+color: #00B1FF;
+padding-left: 30px;
+padding-top: 10px;
+text-align: center;
+}
+
+#bodyhome h2 {
+color: #00B1FF;
+}
 
   /* Main setting end */
 
@@ -122,6 +137,8 @@ body{
   .formed{
     background-image: url(/images/backimg2.png);
   }
+
+  
   .formed h1{
     color: #fff;
     text-align: center;
@@ -145,6 +162,7 @@ body{
   border: .1rem solid rgba(0, 0, 0, .2);
   background-color: #eee;
   padding: 1.5rem;
+  padding-bottom: 3rem;
   margin: 0 auto;
   }
 
@@ -179,6 +197,10 @@ body{
     border-radius: 5px;
     cursor: pointer;
     margin-top: 1rem;
+    position: absolute;
+    top: 600px;
+    left: 565px;
+    width: 400px;
     
   }
 
@@ -186,3 +208,48 @@ body{
     background-color:rgba(0,1,169,0.8) ;
   }
   /* Section Booking Form End */
+
+  /* Section Popup Start */
+  .popup{
+    width: 400px;
+    background-color: #fff;
+    border-radius: 2rem;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1) ;
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+  }
+
+  .popup h3{
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 32px;
+  }
+  .popup p{
+      margin-top: .5rem;
+  }
+
+  .popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #76bd4c ;
+    border-radius: .8rem;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  }
+
+  
+
+  .open-popup{
+    visibility: visible;
+    top: 50%;
+    transform:  translate(-50%, -50%) scale(1);
+
+  }
+  /* Section Popup End */

@@ -6,6 +6,7 @@
         <title>BigMac Restaurant</title>
         <link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
         <link rel="stylesheet" type="text/css" href="StyleBooking.css">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
 
     <body id="bodyhome">
@@ -23,7 +24,7 @@
         <section class="formed">
             <h1>Booking Your Spot Now </h1>
             <div class="form-container">
-                <div class="form-img"></div>
+                <!-- <div class="form-img"></div> -->
 
                 <div class="form-content">
                     
@@ -63,11 +64,29 @@
                             </select>
                         </div>
 
-                        <button class="BtnSubmit" onclick="window.location.href = 'table.html';">Submit</button>
+                        
                 </form>
+                <button class="BtnSubmit" onclick="openPopup()">Submit</button>
+                </div>
+
+                <div class="popup" id="popup">
+                    <i class="fa-solid fa-circle-check fa-2xl" style="color: #76bd4c;"></i>
+                    <h3>Thank You</h3>
+                    <p>Your Detail Have been Successfully recorded</p>
+                    <button type="button"  onclick="closePopup()">OK</button>
                 </div>
             </div>
+            <script>
+                let popup = document.getElementById("popup");
 
+                function openPopup(){
+                    popup.classList.add("open-popup");
+                }
+
+                function closePopup(){
+                    popup.classList.remove("open-popup")
+                }
+            </script>
             
         </section>
     </body>

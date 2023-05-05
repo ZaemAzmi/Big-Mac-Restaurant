@@ -42,8 +42,23 @@ html::-webkit-scrollbar-thumb{
   border-radius: 5rem;
 }
 
-body{
-  background: var(--bg);
+#bodyhome {
+  background-image: url('images/background.png');
+  color: #FFF;
+  font-family: Verdana, Arial, sans-serif;
+background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#bodyhome header {
+color: #00B1FF;
+padding-left: 30px;
+padding-top: 10px;
+text-align: center;
+}
+
+#bodyhome h2 {
+color: #00B1FF;
 }
 
 /* Main setting end */
