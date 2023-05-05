@@ -21,6 +21,10 @@
   }
 
   body{
+    
+    background-image: url('images/background.png');
+	  background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
   }
@@ -47,63 +51,43 @@
 /* Main setting end */
 
 /* Nav Bar Start */
-li, a ,button{
-  font-family: Literata;
-  font-weight:500;
-  font-size: 16px;
-  color: #fff;
-  text-decoration: none;
+nav {
+	background-image: url('images/BigMaclogo.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-style: italic;
+	margin-top: 30px;
+	height: 50px;
+	padding-bottom: 5px;
+}
+  
+nav a {
+	text-decoration: none;
+	color: white ;
 }
 
-header{
-  display: flex;
-  justify-content: space space-between;
-  align-items: center;
-  padding: 30px 10%;
-  background-color: var(--bg);
+nav a:hover { 
+	color: #00B1FF; 
 }
 
-.logo{
-  cursor: pointer;
-}
+nav a.active {
+	border-bottom: 2px solid white;
+    padding-bottom: 3px; 
+	
+  }
 
-.nav_links {
-  list-style: none;
-}
-
-.nav_links li{
-  display: inline-block;
-  padding: 0px 20px;
-}
-
-.nav_links li a{
-  transition: all 0.3s ease 0s;
-}
-
-.nav_links li a:hover{
-  color: #0088a9;
-}
-
-.BtnLogin{
-  align-content: space-between;
-}
-
-#logbutton{
-  background-color: var(--main-color);
-  color: white;
-  position:absolute ;
-  margin-right: 5%;
-  border-radius: 100px;
-
-  margin-left: 70%;
-  border: none;
-  padding :9px 25px;
-  cursor:pointer;
-  transition: all 0.3s ease 0s;
-}
-#logbutton:hover{
-  background-color: rgba(0,1,169,0.8);
-}
+  #logbutton{
+    background-color: black;
+    color: white;
+    position:absolute ;
+    right: 30;
+    top: 30;
+    border-radius: 100px;
+  }
+  
+  #logbutton:hover{
+      background-color: rgba(169, 0, 0, 0.8);
+    }
 /* Nav Bar End */
 
 
