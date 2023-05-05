@@ -154,12 +154,10 @@ nav a.active {
   }
 
   thead th{
-    position: sticky;
     top: 0;
     /* background-color: var(--bg); */
     color: #fff;
     font-size: 1rem;
-    
   }
 
   th, td{
