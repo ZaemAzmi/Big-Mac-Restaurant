@@ -27,6 +27,6 @@ for(var i=0; i<btnAddCart.length; i++){
         truncatedPrice = prices[code-1].textContent.substring(2);
         thisPrice = parseFloat(truncatedPrice);
         cost += thisPrice;
-        console.log(cost);
+        alert("Current cost for your purchase is RM"+cost+".00");
     });
 }
