@@ -1,0 +1,176 @@
+@import url(https://fonts.googleapis.com/css?family=Literata&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
+
+/* Main setting start*/
+:root{
+  --main-color: #219ebc;
+  --black: #13131a;
+  --bg: #010103;
+  --border: .1rem solid rgba(255,255,255,.3);
+}
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: .2s linear;
+}
+
+html{
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+
+}
+
+html::-webkit-scrollbar{
+  width: .3rem;
+}
+
+html::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  background: #fff;
+  border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+  }
+
+  /* Main setting end */
+
+  /* Nav Bar Start */
+  li, a ,button{
+    font-family: Literata;
+    font-weight:500;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  header{
+    display: flex;
+    justify-content: space space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: var(--bg);
+  }
+  
+  .logo{
+    cursor: pointer;
+  }
+
+  .nav_links {
+    list-style: none;
+  }
+
+  .nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+  }
+
+  .nav_links li a{
+    transition: all 0.3s ease 0s;
+  }
+
+  .nav_links li a:hover{
+    color: #0088a9;
+  }
+
+  .BtnLogin{
+    align-content: space-between;
+  }
+
+  #logbutton{
+    background-color: var(--main-color);
+    color: white;
+    position:absolute ;
+    margin-right: 5%;
+    border-radius: 100px;
+  
+    margin-left: 70%;
+    border: none;
+    padding :9px 25px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+  }
+  #logbutton:hover{
+    background-color: rgba(0,1,169,0.8);
+  }
+  /* Nav Bar End */
+
+  /* Section Booking Form Start*/
+
+  .formed{
+    background-image: url(/images/backimg2.png);
+  }
+  .formed h1{
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Literata';
+    padding: 2rem;
+    color: #fff;
+    
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: 700;
+    color: #13131a;
+    font-size: 1.5rem;
+  }
+  .formed form{
+  max-width: 30rem;
+  border-radius: .5rem;
+  box-shadow: var(--border);
+  border: .1rem solid rgba(0, 0, 0, .2);
+  background-color: #eee;
+  padding: 1.5rem;
+  margin: 0 auto;
+  }
+
+  .formed form .form-field{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem;
+  }
+
+  .formed form .form-field{
+      width: 100%;
+  }
+
+
+  .form-field input{
+    color: #000;
+    height: 2rem;
+    width: 10rem;
+    
+  }
+
+  .form-field p{
+    height: 2rem;
+  }
+
+  .BtnSubmit {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    
+  }
+
+  .BtnSubmit:hover {
+    background-color:rgba(0,1,169,0.8) ;
+  }
+  /* Section Booking Form End */

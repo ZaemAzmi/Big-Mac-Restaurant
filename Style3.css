@@ -4,6 +4,7 @@
 /* Main setting start*/
 :root{
   --main-color: #219ebc;
+  --hover: rgba(0,1,169,0.8);
   --black: #13131a;
   --bg: #010103;
   --border: .1rem solid rgba(255,255,255,.3);
@@ -75,7 +76,7 @@ body{
 
   header{
     display: flex;
-    justify-content: space space-between;
+    
     align-items: center;
     padding: 30px 10%;
   }
@@ -345,37 +346,85 @@ body{
 .menu .box-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(28rem, .5fr));
-  gap:1.5rem;
+  gap:.5rem;
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .menu .box-container .box{
   padding: 5rem;
   padding-top: 3.5rem;
   text-align: center;
-  border:var(--border)
+  border:.1rem solid rgba(0,0,0,.2);
+  border-radius: .5rem;
+  box-shadow: var(--border);
+  background-color: #b3acac;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
-.menu .box-container .box img{
-  height:10rem;
+.menu .box-container .box .image{
+  height:12rem;
+  width: 100%;
+  padding: 0.5rem;
+  overflow: hidden;
+  position: relative;
 }
 
-.menu .box-container .box h3{
+.menu .box-container .box .image img{
+  height:100%;
+  width: 100%;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.menu .box-container .box .content{
+  padding: .1rem;
+  padding-top: 1rem;
+}
+
+.menu .box-container .box .content .star{
+  padding-bottom: .1rem;
+}
+
+.menu .box-container .box .content .star i{
+  color: #f6d365;
+  font-size: 1.7rem;
+}
+.menu .box-container .box .content h3{
   color: #fff;
   font-size: 2rem;
   padding: 1rem 0;
 }
 
-.menu .box-container .box p{
+.menu .box-container .box .content p{
   color: #fff;
   font-size: 1rem;
   padding: 1rem 0;
 }
 
-.menu .box-container .box .price{
+.menu .box-container .box .content span{
   color: #fff;
   font-size: 2.5rem;
   padding: .5rem 0;
+}
+
+.menu .box-container .box .content .btn{
+  margin-left: .5rem;
+}
+
+.BtnAddCart{
+  background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+}
+
+.BtnAddCart:hover{
+  background-color: rgba(0,1,169,0.8);;
 }
 
 /* Menu Section End */

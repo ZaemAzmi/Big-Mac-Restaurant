@@ -1,12 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Literata&display=swap);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap');
 
+/* Main setting start*/
 :root{
     --main-color: #219ebc;
     --black: #13131a;
     --bg: #010103;
     --altbg: #e5e5e5;
     --border: .1rem solid rgba(255,255,255,.3);
+    --tickGreen: #43e97b;
   }
 *{
     font-family: 'Poppins', sans-serif;
@@ -42,6 +44,68 @@
     background: #fff;
     border-radius: 5rem;
   }
+/* Main setting end */
+
+/* Nav Bar Start */
+li, a ,button{
+  font-family: Literata;
+  font-weight:500;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header{
+  display: flex;
+  justify-content: space space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: var(--bg);
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.nav_links {
+  list-style: none;
+}
+
+.nav_links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+  color: #0088a9;
+}
+
+.BtnLogin{
+  align-content: space-between;
+}
+
+#logbutton{
+  background-color: var(--main-color);
+  color: white;
+  position:absolute ;
+  margin-right: 5%;
+  border-radius: 100px;
+
+  margin-left: 70%;
+  border: none;
+  padding :9px 25px;
+  cursor:pointer;
+  transition: all 0.3s ease 0s;
+}
+#logbutton:hover{
+  background-color: rgba(0,1,169,0.8);
+}
+/* Nav Bar End */
+
 
   .table{
     width: 100%;
@@ -74,7 +138,7 @@
   td button:nth-child(2){
     background-color: #d90429;
   }
-
+  
   .add-new{
     padding: 10px 20px;
     color: #fff;
@@ -100,13 +164,18 @@
     border-collapse: collapse;
 
   }
+  thead{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  }
 
   thead th{
     position: sticky;
     top: 0;
-    background-color: var(--bg);
+    /* background-color: var(--bg); */
     color: #fff;
     font-size: 1rem;
+    
   }
 
   th, td{
