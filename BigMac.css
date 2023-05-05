@@ -126,15 +126,29 @@ nav a.active {
 
 #wrapper {
 	background-color:transparent;
+	position: relative;
 	padding: 20px;
+	margin-left: 100px;
 	margin-bottom: 20px;
 	min-width: 300px;
-    max-width: 300px;
+    max-width: 500px;
 	height: 100px;
 	text-align: center;
 	padding-bottom: 100px; 
 
 }
+
+#wrapper img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+  }
+  
+  #wrapper img:first-child {
+	opacity: 1;
+  }
 
 #wrapper2 {
 	background-color: #2072AF;
@@ -305,9 +319,7 @@ nav a.active {
 #wrapper14 {
 	background-color: transparent;
 	width: 350px;
-	height: 200px;
-	position: absolute;
-	bottom: 10px;
+	height: 150px;
 	text-align: center;
 	justify-content: center;
 	
@@ -317,7 +329,7 @@ nav a.active {
 .scrollable-text {
 	height: 200px; /* set the height of the container */
 	overflow: auto; /* make the container scrollable */
-  }
+}
 
 
 #headerlog {
@@ -338,11 +350,12 @@ nav a.active {
 .input-line {
 	border: none;
 	background: none;
+	width: 50%;
 	border-bottom: 1px solid black;
 	outline: none; /* Optional - removes the outline when the input is focused */
-  }
+}
 
-  .input-line1 {
+.input-line1 {
 	display: block;
 	width: 80%;
 	padding: 10px;
@@ -353,12 +366,12 @@ nav a.active {
 	border: none;
 	border-bottom: 1px solid #ccc;
 	box-sizing: border-box;
-  }
+}
   
-  .input-line1:focus {
+.input-line1:focus {
 	outline: none;
 	border-bottom-color: #2196f3;
-  }
+}
 
 
 button {
@@ -373,7 +386,7 @@ button {
 
 button:hover{
     background-color: rgba(31, 31, 31, 0.8);
-  }
+}
 
 #savebut {
 	background-color: #00B1FF;
@@ -416,7 +429,8 @@ button:hover{
 
 #button2:hover{
     background-color: rgba(0, 3, 169, 0.8);
-  }
+	color: white;
+}
 
 #logbutton{
 	background-color: black;
@@ -556,28 +570,4 @@ footer {
   } */
 
 
-  .slider {
-	position: relative;
-	width: 550px;
-	height: 500px;
-	overflow: hidden;
-  }
-  
-  .slider img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	transition: transform 0.5s ease-in-out;
-  }
-  
-  .slider img:last-of-type {
-	transform: translateX(100%);
-  }
-  
-  .slider.active img:first-of-type {
-	transform: translateX(-100%);
-  }
-  
-  .slider.active img:last-of-type {
-	transform: translateX(0);
-  }
+ 
