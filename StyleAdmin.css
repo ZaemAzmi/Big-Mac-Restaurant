@@ -48,6 +48,11 @@
     background: #fff;
     border-radius: 5rem;
   }
+  .container{
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
 /* Main setting end */
 
 /* Nav Bar Start */
