@@ -7,6 +7,7 @@
         <link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
         <link rel="stylesheet" type="text/css" href="StyleBooking.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <script defer src="scripts/booking.js"></script>
     </head>
 
     <body id="bodyhome">
@@ -28,32 +29,36 @@
 
                 <div class="form-content">
                     
-                    <form action="#">
+                    <form id="form" action="#">
                         <h3 class="heading">Reservation Slot</h3>
 
                         <div class="form-field">
                             <p>Your Name</p>
-                            <input type="text" placeholder="Name">
+                            <input id="name" type="text" placeholder="Name">
+                            <div class="error"></div>
                         </div>
 
                         <div class="form-field">
                             <p>Your Phone Number</p>
-                            <input type="tel" placeholder="Phone Number">
+                            <input id="phoneNumber" type="tel" placeholder="Phone Number">
+                            <div class="error"></div>
                         </div>
 
                         <div class="form-field">
                             <p>Date</p>
-                            <input type="date" >
+                            <input id="date" type="date" >
+                            <div class="error"></div>
                         </div>
 
                         <div class="form-field">
                             <p>Time</p>
-                            <input type="time" >
+                            <input id="time" type="time" >
+                            <div class="error"></div>
                         </div>
 
                         <div class="form-field">
                             <p>How many pax?</p>
-                            <select name="select" id="#">
+                            <select name="select" id="pax">
                                 <option placeholder="Choose">Choose</option>
                                 <option value="1">1 Person</option>
                                 <option value="2">2 Person</option>
@@ -62,18 +67,20 @@
                                 <option value="5">5 Person</option>
                                 <option value="5+">5+ Person</option>
                             </select>
+                            <div class="error">error</div>
                         </div>
-
-                        
+                        <div class="btn-submit">
+                            <button type="submit">Submit</button>
+                        </div>
                 </form>
-                <button class="BtnSubmit" onclick="openPopup()">Submit</button>
+                <!-- <button class="BtnSubmit" onclick="openPopup()">Submit</button> -->
                 </div>
 
                 <div class="popup" id="popup">
                     <i class="fa-solid fa-circle-check fa-2xl" style="color: #76bd4c;"></i>
                     <h3>Thank You</h3>
                     <p>Your Detail Have been Successfully recorded</p>
-                    <button type="button"  onclick="closePopup()">OK</button>
+                    <button type="button"  onclick="closePopup">OK</button>
                 </div>
             </div>
             <script>
@@ -84,7 +91,7 @@
                 }
 
                 function closePopup(){
-                    popup.classList.remove("open-popup")
+                    popup.classList.replace("open-popup")
                 }
             </script>
             
