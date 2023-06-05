@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigMac | Booking</title>
+    <link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="book.css">
+
+    <!-- Link Boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="bodyPage">
+    <!-- Header -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <a href="index.html" class="logo">BigMac</a>
+            <!-- Nav opt -->
+            <div class="group-middle-nav">
+                <a href="index.html" class="home">Home</a>
+                <a href="About.html" class="home">About</a>
+                <a href="book.html" class="active-menu">Booking</a>
+                <a href="menu.html" class="home">Menu</a>
+            </div>
+            <div class="group-right-nav">
+            <button class="btn-login" onclick="location.href='Login.html'">login</button>
+            </div>
+        </div>
+    </header>
+    <!-- Book section start -->
+    <section class="book container">
+        <div class="book-title">
+            <h2 class="book-titles">Booking Your Slot Now</h2>
+        </div>
+        <!-- Content -->
+        <form action="" class="form" id="form">
+            <!-- Name -->
+            <div class="form-control">
+                <label>Name</label>
+                <input type="text" placeholder="Input Your Name Here" id="username">
+                <!-- check-icon -->
+                <i class='bx bx-check-circle check'></i>
+                <!-- x-icon -->
+                <i class='bx bx-x-circle x'></i>
+                <small>Error Message</small>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-control">
+                <label>Mobile Number</label>
+                <input type="tel" placeholder="Eg: 017234xxx" id="userphone">
+                <!-- check-icon -->
+                <i class='bx bx-check-circle check'></i>
+                <!-- x-icon -->
+                <i class='bx bx-x-circle x'></i>
+                <small>Error Message</small>
+            </div>
+
+            <!-- Date -->
+            <div class="form-control">
+                <label>Date</label>
+                <input type="datetime-local"  id="userdate">
+                <!-- check-icon -->
+                <i class='bx bx-check-circle check'></i>
+                <!-- x-icon -->
+                <i class='bx bx-x-circle x'></i>
+                <small>Error Message</small>
+            </div>
+
+            <!-- Pax -->
+            <div class="form-control">
+                <label>Amount People</label>
+                <select name="select" id="userpax">
+                    <option selected='selected' values id="none">Please Select</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 Person</option>
+                    <option value="3">3 Person</option>
+                    <option value="4">4 Person</option>
+                    <option value="5">5 Person</option>
+                    <option value="5+">5+ Person</option>
+                </select>
+                <!-- check-icon -->
+                <i class='bx bx-check-circle check'></i>
+                <!-- x-icon -->
+                <i class='bx bx-x-circle x'></i>
+                <small>Error Message</small>
+            </div>
+
+            <!-- Button Submit -->
+            <button class="btn-submit" >Submit</button>
+        </form>
+    </section>
+    
+</body>
+<script src="scripts/book.js"></script>
+</html>

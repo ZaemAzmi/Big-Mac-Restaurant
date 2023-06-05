@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;400;600;700;800&display=swap');
+*{
+    font-family: 'Literata', serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --main-color: #219ebc;
+    --text-color:#171427;
+    --bg-color: #fff;
+    --warning-color:#fd4646;
+    --success-color:#2ecc71;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: var(--text-color);
+}
+/* change background */
+/* .bodyPage{
+    background-image: url('images/v28_270.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+section{
+    padding: 4rem 0 3rem;
+}
+/* Header */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 100;
+}
+/* Nav section start */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px 0;
+}
+
+.group-middle-nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+.home{
+    margin: 10px;
+    color: var(--text-color);
+}
+.home:hover{
+    color: var(--main-color);
+}
+.active-menu{
+    border-bottom: 2px solid var(--text-color);
+    margin: 10px; 
+    color: var(--text-color);
+}
+.active-menu:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+.logo{
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+.btn-login{
+    background-color: var(--text-color);
+    border-radius: 50px;
+    color: var(--bg-color);
+    padding: 9px 20px;
+    margin-left: 7px;
+}
+.btn-login:hover{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.btn-buy{
+    display:flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: var(--main-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-buy:hover{
+    background: var(--text-color);
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+/* Nav section End */
+
+/* book section */
+
+.book{
+    margin-top: 2rem;
+}
+.book-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    background-color: beige;
+}
+
+/* book content */
+
+
+.form{
+    width: 100%;
+    /* display: flex; */
+    /* text-align: center; */
+    background-color: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control label{
+    display: inline-block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.form-control input,select{
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 200;
+}
+/* success */
+.form-control.success input,select{
+    border-color:var(--success-color) ;
+}
+.form-control.success i.check{
+    visibility: visible;
+}
+/* error */
+.form-control.error input,select{
+    border-color: var(--warning-color);
+}
+.form-control.error i.x{
+    visibility: visible;
+}
+.form-control.error small{
+    visibility: visible;
+    color: var(--warning-color);
+}
+
+#userpax{
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: 200;
+}
+#userpax.error{
+    border-color: var(--warning-color);
+}
+#userpax.success{
+    border-color: var(--success-color);
+}
+#userpax + i.check {
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    left: 405px;
+    font-size: 20px;
+    color: var(--success-color);
+  }
+  
+  #userpax.error + i.x {
+    visibility: visible;
+    color: var(--warning-color);
+  }
+  
+  #userpax.error + small {
+    visibility: visible;
+    color: var(--warning-color);
+  }
+.form-control i{
+    visibility: hidden;
+    position: absolute;
+    top: 38px;
+    left: 405px;
+    font-size: 20px;
+}
+.check{
+    color: var(--main-color); 
+}
+.x{
+    color: var(--warning-color);
+}
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.btn-submit{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+    border-color: transparent;
+    padding: .5rem .2rem;
+    border-radius: 4px;
+    width: 40%;
+}
