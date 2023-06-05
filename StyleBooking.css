@@ -189,6 +189,11 @@ color: #00B1FF;
     height: 2rem;
   }
 
+  .btn-submit button{
+    color: var(--black);
+    background-color: var(--main-color);
+  }
+
   .BtnSubmit {
     background-color: var(--main-color);
     color: #fff;
@@ -206,6 +211,12 @@ color: #00B1FF;
 
   .BtnSubmit:hover {
     background-color:rgba(0,1,169,0.8) ;
+  }
+
+  /* error display */
+  .error{
+    color: #ff3860;
+    font-size: 9px;
   }
   /* Section Booking Form End */
 
