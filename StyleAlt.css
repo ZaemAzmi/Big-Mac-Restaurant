@@ -18,6 +18,7 @@
     --text-color:#171427;
     --bg-color: #fff;
     --warning-color:#fd4646;
+    --neutral-color: #DFE1E6;
 }
 
 img{
@@ -229,14 +230,14 @@ header{
 .menu-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px,auto));
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 
 .product-menu{
     position: relative;
 }
 .product-menu:hover{
-    padding: 8px;
+    background-color: var(--neutral-color);
     border: 1px solid var(--text-color);
     transition: 0.4s;
 }
@@ -250,24 +251,34 @@ header{
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: 0.4rem;
+    margin: 5px;
+
 }
 
 .price{
     font-weight: 500;
+    margin: 5px;
+}
+.ingredient{
+    padding-top: 10px;
+    border-top: 1px solid #e9e9e9;
+    margin: 5px;
 }
 .add-cart{
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
-    background: var(--text-color);
-    color: var(--bg-color);
+    background: var(--bg-color);
+    color: var(--text-color);
     padding: 10px;
     cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
 }
 
 .add-cart:hover{
-    background: hsl(253, 4%, 52%);
+    background-color: var(--neutral-color);
+    color: var(--main-color);
 }
 
 /* breakpoints / build responsive */
