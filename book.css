@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Literata:wght@400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@200;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700;800&display=swap');
 *{
-    font-family: 'Literata', serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     scroll-padding-top: 2rem;
@@ -11,12 +11,15 @@
 }
 
 :root{
-    --main-color: #219ebc;
+    --main-color: #F26B1D;
+    --second-color:#F28729;
     --text-color:#171427;
     --bg-color: #fff;
     --warning-color:#fd4646;
     --success-color:#2ecc71;
     --neutral-color: #F4F5F7;
+    --primary-color: #3D4252;
+    --accent-color:#F2D8A7;
 }
 
 img{
@@ -68,19 +71,19 @@ header{
     display: flex;
     justify-content: space-evenly;
 }
-.home{
+.navBar{
     margin: 10px;
     color: var(--text-color);
 }
-.home:hover{
+.navBar:hover{
     color: var(--main-color);
 }
-.active-menu{
+.active-navBar{
     border-bottom: 2px solid var(--text-color);
     margin: 10px; 
     color: var(--text-color);
 }
-.active-menu:hover{
+.active-navBar:hover{
     color: var(--main-color);
     border-bottom: 2px solid var(--main-color);
 }
@@ -250,7 +253,7 @@ header{
     width: 40%;
 }
 .btn-submit:hover{
-    background-color: var(--neutral-color);
+    background-color: var(--second-color);
 }
 
 /* Table Section */
@@ -276,7 +279,7 @@ header{
 /* footer section */
 .footer{
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--accent-color);
     padding:20px 0 30px;
 }
 .footer .container{
