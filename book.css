@@ -172,14 +172,25 @@ header{
     font-weight: 200;
 }
 /* success */
-.form-control.success input,select{
+.form-control.success input{
+    border-color:var(--success-color) ;
+}
+.form-control.success select{
     border-color:var(--success-color) ;
 }
 .form-control.success i.check{
+    color: var(--success-color);
+    visibility: visible;
+}
+.form-control.success select.check{
+    border-color:var(--success-color) ;
     visibility: visible;
 }
 /* error */
-.form-control.error input,select{
+.form-control.error input{
+    border-color: var(--warning-color);
+}
+.form-control.error select{
     border-color: var(--warning-color);
 }
 .form-control.error i.x{
@@ -190,39 +201,7 @@ header{
     color: var(--warning-color);
 }
 
-#userpax{
-    border: 2px solid var(--text-color);
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    font-size: 16px;
-    font-weight: 200;
-}
-#userpax.error{
-    border-color: var(--warning-color);
-}
-#userpax.success{
-    border-color: var(--success-color);
-}
-#userpax + i.check {
-    visibility: hidden;
-    position: absolute;
-    top: 38px;
-    left: 405px;
-    font-size: 20px;
-    color: var(--success-color);
-  }
-  
-  #userpax.error + i.x {
-    visibility: visible;
-    color: var(--warning-color);
-  }
-  
-  #userpax.error + small {
-    visibility: visible;
-    color: var(--warning-color);
-  }
+
 .form-control i{
     visibility: hidden;
     position: absolute;

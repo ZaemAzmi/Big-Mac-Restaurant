@@ -3,7 +3,6 @@ const username = document.getElementById('username');
 const userphone = document.getElementById('userphone');
 const userdate = document.getElementById('userdate');
 const userpax = document.getElementById('userpax');
-const none = document.getElementById('none');
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -19,9 +18,8 @@ function checkInputs(){
     // get values from input
     const usernameValue = username.value.trim();
     const userphoneValue = userphone.value.trim();
-    const userdateValue = userdate.value.trim();
-    const userpaxValue = userpax.value.trim();
-    const noneValue = userpax.value.trim();
+    const userdateValue = userdate.value;
+    const userpaxValue = userpax.value;
 
     // username check
     if(usernameValue === ''){
@@ -51,7 +49,7 @@ function checkInputs(){
     }
 
     // userpax check
-    if(userpaxValue === 'none'){
+    if(userpaxValue === ''){
         setErrorFor(userpax,'Please select the number of people');
         allInputsValid = false;
     }
