@@ -80,21 +80,21 @@ if(isset($_GET['delete'])){
                 </li>
                 <!-- account -->
                 <li class="list">
-                    <a href="" class="nav-link">
+                    <a href="../Adacc.html" class="nav-link">
                         <i class='bx bxs-user-account icon' ></i>
                         <span class="link">Acount</span>
                     </a>
                 </li>
                 <!-- menu -->
                 <li class="list">
-                    <a href="" class="nav-link">
+                    <a href="adminMenu.php" class="nav-link">
                         <i class='bx bxs-food-menu icon' ></i>
                         <span class="link">Order</span>
                     </a>
                 </li>
                 <!-- table -->
                 <li class="list">
-                    <a href="" class="nav-link">
+                    <a href="../Adtable.html" class="nav-link">
                         <i class='bx bxs-bookmark icon'></i>
                         <span class="link">Table</span>
                     </a>

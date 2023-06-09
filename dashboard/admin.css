@@ -217,6 +217,7 @@ nav {
   width: 95%;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .space h3{
   align-self: center;
@@ -279,8 +280,12 @@ button:active {
 
 /* Table Section Start */
 .product-display{
-  margin: 2rem 0;
-  overflow-y: scroll;
+  /* margin: 2rem 0; */
+  /* overflow-y: scroll; */
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
+
 }
 .product-display-table{
   width: 100%;
