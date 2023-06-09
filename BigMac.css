@@ -374,8 +374,15 @@ nav a.active {
 	max-width: 600px;
 	text-align: center;
 	padding-bottom: 100px;
+	color: black;
 	/* border: 1px solid #bbb; */
 
+}
+
+#wrapper0 h2 {
+	color: #2072AF;
+	font-size: 30px;
+	font-family: 'Montserrat', serif, sans-serif;
 }
 
 #wrapper {
@@ -640,8 +647,8 @@ nav a.active {
 
 
 button {
-	background-color: transparent;
-	color: rgb(255, 255, 255);
+	background-color: black;
+	color: white;
 	padding: 12px 24px;
 	border: 2 px white;
 	cursor: pointer;
@@ -650,7 +657,8 @@ button {
 }
 
 button:hover {
-	background-color: rgba(31, 31, 31, 0.8);
+	background-color: white;
+	color: black;
 }
 
 #savebut {
