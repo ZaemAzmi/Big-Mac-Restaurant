@@ -9,9 +9,9 @@ $(document).ready(function() {
           $("#logbutton").text("Welcome, " + response.username);
           $("#logoutButton").show();
           $("#accicon").show();
-          $("#logbutton").click(function() {
-            window.location.href = "profile.html";
-          });
+          // $("#logbutton").click(function() {
+          //   window.location.href = "profile.html";
+          // });
         } else {
           $("#logbutton").text("Login");
           $("#logoutButton").hide();
