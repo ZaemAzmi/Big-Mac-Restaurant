@@ -9,35 +9,59 @@
 
 		<link rel="stylesheet" href="BigMac.css">
 		<link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="scripts\LoginStatus.js" type="text/javascript"></script>
 		
 	</head>
 	
-	<body style="background-color: #292929;">
+	<body style="background-color: white;">
 	
-		<nav>
-			<a href="index.html">Home</a> &nbsp; &nbsp;
-			<a href="About.html" class="active">About</a> &nbsp; &nbsp;
-			<a href="book.html">Booking</a> &nbsp; &nbsp;
-			<a href="Menu.html">Menu</a> &nbsp; &nbsp;
-			<button id="logbutton" onclick="location.href='Login.html'">Login</button>
-		</nav><br>
+		<!-- Nav -->
+        <div class="nav container">
+			<a href="index.html" class="logo">BigMac</a>
+			<!-- Nav opt -->
+			<div class="group-middle-nav">
+				<a href="index.html" class="navBar">Home</a>
+				<a href="About.html" class="active-navBar">About</a>
+				<a href="book.html" class="navBar" >Booking</a>
+				<a href="altPreorder.html" class="navBar">Menu</a>
+			</div>
+			<div class="group-right-nav">
+				<div class="dropdown" >
+					<div class="vertical-center">
+						<img src="images/accicon.png" alt="acc" width="30" height="30" id="accicon">
+						<button id="logbutton">Login</button>
+						<div class="dropdown-content" id="dropdownContainer">
+							<!-- Dropdown items -->
+							<a id="logoutButton" onclick="logout()">Log Out</a>
+							<a href="#">Setting</a>
+							<a href="Profile.html">Profile</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><br>
         <img src="images/about2.png" style="width: 70%; height: 400px; display: block; margin: 0 auto;">
         <br><br>
         <header id="headabout" style="text-align: center;">
-            <h1> 
-                ABOUT US
-                <hr style="width: 60%;">
-            </h1>
+            
         </header>
     <div style="text-align: center;" >
         <div id="wrapper0"  style="display: inline-block; width: 50%; vertical-align: top; margin-top: 0%; text-align: justify; padding: 20px;">
-            <main>             
+            <main>     
+				<h1> 
+					ABOUT US
+					<hr style="width: 100%;">
+				</h1>     
+				
+				<br>
                 <p>
                     &nbsp;  BigMac is a restaurant that is dedicated to serving the best burgers in town. Our restaurant has become a popular destination for burger lovers who are looking for a delicious and satisfying meal. We are committed to using only the freshest ingredients in every burger we make, and our chefs are passionate about creating mouth-watering burgers that are sure to please. <br><br>
                     &nbsp;  At BigMac, we take great pride in our team of talented chefs who have honed their skills in some of the best kitchens in the country. Our head chef, John, has been with us for over 15 years and has a wealth of experience in creating the perfect burger. His culinary journey started as a dishwasher, and he worked his way up to become the head chef. His dedication to his craft and commitment to quality have earned him a reputation as one of the best burger chefs in the area.
                 </p></main>
         </div><div id="wrapper0"  style="display: inline-block; width: 50%; vertical-align: top; text-align: justify; padding: 20px;">
             <main>
+				<br><br><br>
                 <p>
                     &nbsp;  Our restaurant is more than just a place to enjoy a great burger. We have created an inviting atmosphere that is perfect for families, friends, and colleagues to come together and enjoy a meal. Our friendly staff are always on hand to make sure that every customer feels welcome and comfortable.<br><br>
                     &nbsp;  At BigMac, we are committed to providing our customers with the highest quality food and service. We believe that every customer deserves the best, and we work tirelessly to ensure that every burger is cooked to perfection. We welcome you to come and experience the BigMac difference for yourself.
@@ -46,7 +70,7 @@
         </div>
     </div><br><br>
 
-	<div id="wrapper2">
+	<div id="wrapper2"style="background-color: #F2D8A7;">
 
 		<div id="wrapper3" style="display: inline-block; width: 50%; vertical-align: top;">
 			<h1> 
@@ -79,7 +103,7 @@
 		<em><a href = "mailto:BigMac@gmail.com">BigMac@gmail.com</a></em>
 		</footer>
 	</div>
-
+	<script src="scripts\logout.js" type="text/javascript"></script>
 </body>
 
 
