@@ -35,8 +35,9 @@ $(document).ready(function() {
       type: "GET",
       dataType: "json",
       success: function(response) {
+        window.location.href = "login.html";
         if (response.success) {
-          window.location.href = "/Pr/Login.html";
+          location.reload();
         }
       }
     });
