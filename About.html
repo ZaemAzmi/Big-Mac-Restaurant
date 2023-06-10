@@ -11,6 +11,7 @@
 		
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="scripts\LoginStatus.js" type="text/javascript"></script>
 
 </head>
 <body id="bodyhome">
@@ -18,18 +19,29 @@
 	<header>
 		<!-- Nav -->
         <div class="nav container">
-            <a href="index.html" class="logo">BigMac</a>
-            <!-- Nav opt -->
-            <div class="group-middle-nav">
-                <a href="index.html" class="navBar">Home</a>
-                <a href="About.html" class="active-navBar">About</a>
-                <a href="book.html" class="navBar" >Booking</a>
-                <a href="altPreorder.html" class="navBar">Menu</a>
-            </div>
+			<a href="index.html" class="logo">BigMac</a>
+			<!-- Nav opt -->
+			<div class="group-middle-nav">
+				<a href="index.html" class="navBar">Home</a>
+				<a href="About.html" class="active-navBar">About</a>
+				<a href="book.html" class="navBar" >Booking</a>
+				<a href="altPreorder.html" class="navBar">Menu</a>
+			</div>
 			<div class="group-right-nav">
-            <!-- button login -->
-            <button id="logbutton" onclick="location.href='Login.html'">login</button>
-            </div>
+				<div class="dropdown" >
+					<div class="vertical-center">
+						<img src="images/accicon.png" alt="acc" width="30" height="30" id="accicon">
+						<button id="logbutton">Login</button>
+						<div class="dropdown-content" id="dropdownContainer">
+							<!-- Dropdown items -->
+							<a id="logoutButton" onclick="logout()">Log Out</a>
+							<a href="#">Setting</a>
+							<a href="Profile.html">Profile</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	
 	</header>
 
@@ -98,7 +110,7 @@
 		<em><a href = "mailto:BigMac@gmail.com">BigMac@gmail.com</a></em>
 		</footer>
 	</div>
-
+	<script src="scripts\logout.js" type="text/javascript"></script>
 </body>
 
 

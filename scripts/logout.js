@@ -8,16 +8,19 @@ $(document).ready(function() {
         if (response.loggedIn) {
           $("#logbutton").text("Welcome, " + response.username);
           $("#logoutButton").show();
+          $("#accicon").show();
           $("#logbutton").click(function() {
             window.location.href = "profile.html";
           });
         } else {
           $("#logbutton").text("Login");
           $("#logoutButton").hide();
+          $("#accicon").hide();
+          $("#dropdownContainer").hide();
           $("#logbutton").click(function() {
             window.location.href = "login.html";
           });
-        }
+        } 
       },
       error: function() {
         console.log("Error fetching login status.");
@@ -33,7 +36,7 @@ $(document).ready(function() {
       dataType: "json",
       success: function(response) {
         if (response.success) {
-          location.reload();
+          window.location.href = "/Pr/Login.html";
         }
       }
     });
