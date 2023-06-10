@@ -11,6 +11,7 @@
 		
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts\LoginStatus.js" type="text/javascript"></script>
 
 </head>
 <body id="bodyhome">
@@ -33,7 +34,7 @@
                   <a href="Profile.html" class="active-navBar">Profile</a>
                   <div class="dropdown-content">
                     <!-- Dropdown items -->
-                    <a href="Login.html">Log Out</a>
+                    <a id="logoutButton" onclick="logout()">Log Out</a>
                     <a href="#">Setting</a>
                     <a href="Profile.html">Profile</a>
                   </div>
@@ -104,6 +105,8 @@
     </div>
 
 </div>
+
+<script src="scripts\logout.js" type="text/javascript"></script>
 
 </body>
 
