@@ -921,6 +921,10 @@ label {
 	cursor: pointer;
 }
 
+.table:hover {
+	background-color: #87CEEB; /* Change background color on hover */
+}
+
 #buttonContainer{
 	display: flex;
     justify-content: space-between;
@@ -938,7 +942,11 @@ label {
 	line-height: 40px;
 	font-size: 18px;
 	border-radius: 10px;
-	cursor: pointer;
+	cursor: default;
+}
+
+.confirm:hover {
+	background-color: #135cbb; /* Change background color on hover */
 }
 
 .previous{
@@ -953,7 +961,11 @@ label {
 	line-height: 40px;
 	font-size: 18px;
 	border-radius: 10px;
-	cursor: pointer;
+	cursor: default;
+}
+
+.previous:hover {
+	background-color: #135cbb; /* Change background color on hover */
 }
 
 /* Dropdown Button
