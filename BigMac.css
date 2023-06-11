@@ -854,6 +854,108 @@ label {
 	background-color: black;
 }
 
+#TableSelectionBody {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	overflow: hidden;
+	overflow-y: auto;
+    position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(images/about2.png);
+    background-size: cover;
+    background-position: center;
+    color: black;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#TSWrapper {
+    color: black;
+	background-color: #646464D9;
+    padding: 30px;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    margin-right: 100px;
+    margin-left: 100px;
+    width: auto;
+    height: auto;
+    text-align: center;
+    font-size: 13px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10px;
+}
+
+#TSWrapper h1{
+	color:white;
+	font-style: italic;
+	font-size: xx-large;
+	display: flex;
+	align-items: center;
+}
+
+#TSWrapper h1 img{
+	margin-right: 30px;
+}
+
+.line{
+	border: none;
+    height: 2px;
+    background-color: white;
+}
+
+.table {
+	width: 100px;
+	height: 30px;
+	background-color: #00B1FFCC;
+	font-style: italic;
+	font-weight: 600;
+	border: 2px solid black;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+#buttonContainer{
+	display: flex;
+    justify-content: space-between;
+}
+
+.confirm{
+	width: 150px;
+	height: 40px;
+	background-color: #1C3881;
+	font-weight: 100;
+	color: white;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.previous{
+	width: 150px;
+	height: 40px;
+	background-color: #1C3881;
+	font-weight: 100;
+	color: white;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
 /* Dropdown Button
 .dropbtn {
 	background-color: #04AA6D;
