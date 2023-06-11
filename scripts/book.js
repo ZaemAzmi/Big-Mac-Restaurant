@@ -57,10 +57,33 @@ function checkInputs(){
         setSuccessFor(userpax);
     }
 
-    if(allInputsValid){
-        // Redirect to TableSelection.html
-        location.href = 'TableSelection.html';
-    }
+    if (allInputsValid) {
+        // Set the action and method dynamically
+        form.action = 'phpfile/processBooking.php';
+        form.method = 'POST';
+      
+        // Serialize form data
+        const formData = new FormData(form);
+      
+        // Send form data asynchronously
+        fetch(form.action, {
+          method: form.method,
+          body: formData
+        })
+        .then(response => {
+          // Handle response
+          if (response.ok) {
+            // Redirect to TableSelection.html
+            window.location.href = 'TableSelection.html';
+          } else {
+            // Handle error
+            console.error('Form submission failed.');
+          }
+        })
+        .catch(error => {
+          console.error('An error occurred during form submission.', error);
+        });
+      }
 }
 
 function setErrorFor(input,message){
