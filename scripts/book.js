@@ -58,8 +58,8 @@ function checkInputs(){
     }
 
     if(allInputsValid){
-        // Redirect to altPreorder.html
-        location.href = 'altPreorder.html';
+        // Redirect to TableSelection.html
+        location.href = 'TableSelection.html';
     }
 }
 

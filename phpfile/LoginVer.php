@@ -1,4 +1,6 @@
 <?php
+
+include "config.php";
 // Database connection details
 $host = 'sql12.freesqldatabase.com';
 $dbName = 'sql12625052';
