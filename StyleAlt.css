@@ -164,6 +164,17 @@ header{
     color: var(--warning-color);
     cursor: pointer;
 }
+
+.cart-increment{
+    font-size: 24px;
+    color: var(--warning-color);
+    cursor: pointer;
+}
+
+.quantity-container{
+    display:flex;
+    align-items:center;
+}
 .total{
     display: flex;
     justify-content: flex-end;
