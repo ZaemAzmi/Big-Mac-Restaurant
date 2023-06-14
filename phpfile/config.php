@@ -14,5 +14,5 @@ if ( mysqli_connect_errno() ) {
 }
 
 echo "Database connected successfully<br><br>";
-
+echo "asffasfs"
 ?>
