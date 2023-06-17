@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigMac | Profile</title>
+    <link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="BigMac.css">
+        
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts\LoginStatus.js" type="text/javascript"></script>
+
+</head>
+<body id="bodyhome">
+    <!-- header -->
+    <header>
+        <!-- Nav -->
+        <div class="nav container">
+            <a href="index.html" class="logo">BigMac</a>
+            <!-- Nav opt -->
+            <div class="group-middle-nav">
+                <a href="index.html" class="navBar">Home</a>
+                <a href="About.html" class="navBar">About</a>
+                <a href="book.html" class="navBar" >Booking</a>
+                <a href="altPreorder.html" class="navBar">Menu</a>
+            </div>
+            <div class="group-right-nav">
+                <div class="dropdown">
+                <div class="vertical-center">
+                  <img src="images/accicon.png" alt="acc" width="30" height="30">
+                  <a href="Profile.html" class="active-navBar">Setting</a>
+                  <div class="dropdown-content">
+                    <!-- Dropdown items -->
+                    <a id="logoutButton" onclick="logout()">Log Out</a>
+                    <a href="Profile.html">Profile</a>
+                  </div>
+                </div>
+                </div>
+              </div>
+
+    
+    </header>
+
+
+<div id="wrapper0" style="display: inline-block; width: 50%; vertical-align: top; ">
+
+    &nbsp; &nbsp; 
+
+    <h1> 
+        WELCOME BACK !
+    </h1>
+
+    &nbsp;
+
+    <main id="prodetails" style="text-align: center;">
+        <img id="profile-pic" src="" alt="acc" width="250" height="250"><br><br>
+
+        <!-- name--> <p id="name1"></p> 
+        <!-- gender--><p id="gender"></p>
+        <!-- phone number--> <p id="phonenum1"></p><br><br>
+
+
+    </main> 
+</div>
+
+<div id="wrapper11" style="display: inline-block; width: 50%; vertical-align: top; ">
+
+    <div id="wrapper35" style="display: inline-block; width: 50%; vertical-align: top;">
+    
+        <p id="title">DETAILS</p>
+        <button onclick="toggleForm('name-form')">NAME</button> <br>
+
+        <div id="name-form" style="display: none;">
+            <input type="text" id="name-input" placeholder="Enter your name"><br><br>
+            <button onclick="saveName()">Save</button>
+        </div>
+
+        <button onclick="toggleForm('username-form')">USERNAME</button> <br>
+
+        <div id="username-form" style="display: none;">
+            <input type="text" id="username-input" placeholder="Enter your username"><br><br>
+            <button onclick="saveUsername()">Save</button>
+        </div>
+
+        <button onclick="toggleForm('email-form')">EMAIL</button> <br>
+
+        <div id="email-form" style="display: none;">
+            <input type="email" id="email-input" placeholder="Enter your email"><br><br>
+            <button onclick="saveUsername()">Save</button>
+        </div>
+
+        <button onclick="toggleForm('phone-form')">PHONE NUMBER</button> <br>
+
+        <div id="phone-form" style="display: none;">
+            <input type="text" id="phone-input" placeholder="Enter your Phone number" pattern="\d{10,11}"><br><br>
+            <button onclick="saveUsername()">Save</button>
+        </div>
+
+        <button onclick="toggleForm('birthday-form')">BIRTHDAY</button> <br>
+
+        <div id="birthday-form" style="display: none;">
+            <input type="date" id="birthday-input" placeholder="Enter your birthday"><br><br>
+            <button onclick="saveUsername()">Save</button>
+        </div>
+
+        <button onclick="toggleForm('gender-form')">GENDER</button> <br>
+
+        <div id="gender-form" style="display: none;">
+            <input type="text" id="gender-input" placeholder="Enter your gender"><br><br>
+            <button onclick="saveUsername()">Save</button>
+        </div>
+
+        <button onclick="toggleForm('picture-form')">PROFILE PICTURE</button> <br>
+
+        <div id="picture-form" style="display: none;">
+            <input type="text" id="picture-input" placeholder="Enter your picture"><br><br>
+            <button onclick="saveUsername()">Save</button>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="scripts\logout.js" type="text/javascript"></script>
+<script>
+    function toggleForm(formId) {
+        var form = document.getElementById(formId);
+        var displayValue = form.style.display;
+        var forms = document.querySelectorAll('#wrapper35 > div');
+        var buttons = document.querySelectorAll('#wrapper35 > button');
+        var lineBreaks = document.querySelectorAll('#wrapper35 > br');
+
+        if (displayValue === 'none') {
+            // Show the selected form
+            form.style.display = 'block';
+
+            // Hide all other forms
+            for (var i = 0; i < forms.length; i++) {
+                var otherForm = forms[i];
+                if (otherForm.id !== formId) {
+                    otherForm.style.display = 'none';
+                }
+            }
+
+            // Hide all buttons except the selected button
+            for (var j = 0; j < buttons.length; j++) {
+                var button = buttons[j];
+                if (button.getAttribute('onclick') !== `toggleForm('${formId}')`) {
+                    button.style.display = 'none';
+                }
+            }
+
+            // Remove all line breaks
+            for (var k = 0; k < lineBreaks.length; k++) {
+                var lineBreak = lineBreaks[k];
+                lineBreak.parentNode.removeChild(lineBreak);
+            }
+        } else {
+            // Hide the selected form
+            form.style.display = 'none';
+
+            // Show all buttons
+            for (var l = 0; l < buttons.length; l++) {
+                buttons[l].style.display = 'inline-block';
+            }
+
+            // Add line breaks between the buttons
+            for (var m = 0; m < buttons.length - 1; m++) {
+                buttons[m].insertAdjacentHTML('afterend', '<br>');
+            }
+        }
+    }
+
+    function saveName() {
+        var name = document.getElementById('name-input').value;
+
+        // Perform actions with the updated name (e.g., save to a database)
+
+        // Update the displayed name on the page
+        document.getElementById('name1').textContent = name;
+
+        toggleForm('name-form');
+    }
+
+    // Add similar save functions for other details
+</script>
+
+
+
+</body>
+
+<footer id="footprof">
+    <p>&copy; 2023 BigMac Restaurant</p>
+    <p><em><a href="mailto:BigMac@gmail.com">BigMac@gmail.com</a></em></p>
+</footer>
+
+</html>
