@@ -9,6 +9,13 @@ $(document).ready(function() {
           $("#logbutton").text("Welcome, " + response.username);
           $("#logoutButton").show();
           $("#accicon").show();
+          $("#username").val(response.username);
+          $("#username1").val(response.username);
+          $("#username2").val(response.username);
+          $("#username3").val(response.username);
+          $("#username4").val(response.username);
+          $("#username5").val(response.username);
+          $("#username6").val(response.username);
           $("#name1").text(response.name);
           $("#name2").text(response.name);
           $("#gender").text(response.gender);

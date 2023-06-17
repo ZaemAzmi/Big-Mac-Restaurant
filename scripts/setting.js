@@ -62,6 +62,9 @@ function saveUsername() {
 
     // Perform actions with the updated username (e.g., save to a database)
 
+    // Update the displayed name on the page
+    document.getElementById('username').textContent = name;
+
     toggleForm('username-form');
 }
 
