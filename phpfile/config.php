@@ -8,8 +8,8 @@ $pass = "user1abc";
 $connection = mysqli_connect($host, $user, $pass, $database);
 
 if ( mysqli_connect_errno() ) {
-    echo "Database connection failed";
-    die( mysqli_connect_error() );
+  echo "Database connection failed";
+   die( mysqli_connect_error() );
     // die() is equivalent to exit()
 }
 

@@ -28,26 +28,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (mysqli_num_rows($result) == 1) {
         // User exists, login successful
-        // Redirect to the home page
-        // User exists, login successful
-        // Store the username in a session variable
+        // Retrieve the user's details
+        $user = mysqli_fetch_assoc($result);
+
+        // Store the user's details in session variables
         session_start();
         $_SESSION['username'] = $username;
+        $_SESSION['name'] = $user['name'];
+        $_SESSION['phoneNumber'] = $user['phone'];
+        $_SESSION['gender'] = $user['gender'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['birthday'] = $user['birthday'];
+        $_SESSION['age'] = $user['age'];
+        $_SESSION['propic'] = $user['propic'];
 
-        // Store the username in a session variable
+        // Redirect to the home page or profile page
         header("Location: /Pr/index.html");
         exit(); // Terminate the current script to prevent further execution
     } else {
         // User doesn't exist or incorrect credentials
         echo "Invalid username or password!";
     }
-
-    // Debugging statements
-// if (!$result) {
-//     echo "Query execution failed: " . mysqli_error($connection);
-// } else {
-//     echo "Query executed successfully. Rows: " . mysqli_num_rows($result);
-// }
 }
 
 // Close the database connection
