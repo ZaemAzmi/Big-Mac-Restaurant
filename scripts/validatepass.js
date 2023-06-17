@@ -21,7 +21,7 @@ var existingUsernames = ['Affif720', 'Halim123', 'ahmad', 'syareel'];
 var existingEmails = ['affifazmi720@gmail.com', 'halim@gmail.com', 'makram@gmail.com', 'syareel@gmail.com'];
 
 // Array to store existing phone numbers
-var existingPhoneNumbers = ['0123467161', '0137465381', '01123123123', '0199997325'];
+var existingPhoneNumbers = ['0123467161', '0123123123', '01123123123', '0199997325'];
 
 // Function to check for duplicate details
 function checkDuplicateDetails() {
