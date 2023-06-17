@@ -1,116 +1,85 @@
 <html>
-	
-	<head>
-		<title>
-			BigMac Restaurant
-		</title>
+<head>
+	<title>BigMac Restaurant</title>
+	<link rel="stylesheet" href="BigMac.css">
+	<link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+	<script src="scripts\validatepass.js" type="text/javascript"></script>
 
-		<link rel="stylesheet" href="BigMac.css">
-		<link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
-		
-	</head>
-	
-	<body id ="loginbody">
-	
-		<nav>
-			<a href="index.html">Home</a> &nbsp; &nbsp;
-			<a href="About.html">About</a> &nbsp; &nbsp;
-			<a href="book.html">Booking</a> &nbsp; &nbsp;
-			<a href="Menu.html">Menu</a> &nbsp; &nbsp;
-		</nav>
-		
 
-		<div id="parent-container">
-
-		<form action="Login.html" >
-		<div id="wrapper9" style="display: inline-block; width: 50%; vertical-align: top;">
-		 <main style="margin: 20px 0;">
-			<p> PERSONAL DETAILS</p><br>
-			<label>Name: <br><input type="text" placeholder = "Enter your name " requireD class="input-line1"></label> <br>
-			<label>Phone Number: <br><input type="text" placeholder = "Enter your Phone number " required class="input-line1" pattern="\d{10,11}"></label> <br>
-			<label>Email: <br><input type="email" placeholder = "Enter your Email " required class="input-line1"></label> <br>
-
-			<label for="Gender"> Select Gender:<br></label>
-				<select name="Gender" required>
-					<option value="">Please select</option>
-					<option value="Male">Male</option>
-					<option value="Female">Female</option>
-				</select> <br><br>
-			<label>Birthday: <br><input type="date"></label> <br><br>
-		
-		</main>
-		</div>
-
-		<div id="wrapper9" style="display: inline-block; width: 50%; vertical-align: top;">
-			<main style="margin: 20px 0;">
-				<p> PROFILE DETAILS</p><br>
-				<label>Username: <br><input type="text" placeholder = "Enter your Username " required class="input-line1"></label> <br>
-				<label>Password: <br><input type="password" placeholder = "Enter your Password " required class="input-line1"></label> <br>
-				<label>Confirm Password: <br><input type="password" placeholder = "Enter your Password " required class="input-line1"></label> <br>
-				<label>Choose your icon :</label> <br>
-
-			</main>
-
-			<div id="wrapper14" >
-				<input type="radio" id="icon1" name="icon" value="icon1">
-				<label for="icon1"><img src="images/icon1.png" width="45px" height="45px"></label>
-				  
-				<input type="radio" id="icon2" name="icon" value="icon2">
-				<label for="icon2"><img src="images/icon2.png" width="45px" height="45px" ></label>
-			  
-				<input type="radio" id="icon3" name="icon" value="icon3">
-				<label for="icon3"><img src="images/icon3.png" width="45px" height="45px"></label><br><br>
-
-				<input type="radio" id="icon4" name="icon" value="icon4">
-				<label for="icon4"><img src="images/icon4.png" width="45px" height="45px"></label>
-			  
-				<input type="radio" id="icon5" name="icon" value="icon5">
-				<label for="icon5"><img src="images/icon5.png" width="45px" height="45px" ></label>
-			  
-				<input type="radio" id="icon6" name="icon" value="icon6">
-				<label for="icon6"><img src="images/icon6.png" width="45px" height="45px"></label>
+</head>
+<body id="loginbody">
+	<nav>
+		<a href="index.html">Home</a> &nbsp; &nbsp;
+		<a href="About.html">About</a> &nbsp; &nbsp;
+		<a href="book.html">Booking</a> &nbsp; &nbsp;
+		<a href="Menu.html">Menu</a> &nbsp; &nbsp;
+	</nav>
+	<div id="parent-container">
+		<form method="post" action="phpfile/register.php" onsubmit="return validatePassword();">
+			<div id="wrapper9" style="display: inline-block; width: 50%; vertical-align: top;">
+				<main style="margin: 20px 0;">
+					<p>PERSONAL DETAILS</p><br>
+					<label>Name: <br><input type="text" name="name" placeholder="Enter your name" required class="input-line1"></label> <br>
+					<label>Phone Number: <br><input type="text" name="phone" placeholder="Enter your Phone number" required class="input-line1" pattern="\d{10,11}"></label> <br>
+						<label>Email: <br><input type="email" name="email" placeholder="Enter your Email" required class="input-line1"></label> <br>
+						<label for="Gender">Select Gender:<br></label>
+						<select name="gender" required>
+							<option value="">Please select</option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+						</select> <br><br>
+						<label>Birthday: <br><input type="date" name="birthday"></label> <br><br>
+				</main>
 			</div>
-		</div>
 
-		<div id="wrapper9" style="display: inline-block; width: 50%; vertical-align: top;">
-			<main style="margin: 20px 0;">
+			<div id="wrapper9" style="display: inline-block; width: 50%; vertical-align: top;">
+				<main style="margin: 20px 0;">
+					<p>PROFILE DETAILS</p><br>
+					<label>Username: <br><input type="text" id="username" name="username" placeholder="Enter your Username" required class="input-line1"></label> <br>
+					<label>Password: <br><input type="password" id="password" name="password" placeholder="Enter your Password" required class="input-line1"></label> <br>
+						<label>Confirm Password: <br><input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter your Password" required class="input-line1"></label> <br>
+						<label>Choose your icon:</label> <br>
+				</main>
 
-				<p> PRIVACY & POLICY</p><br>
-  				<div class="scrollable-text">
-    				<h6>Privacy Policy and Agreement for Restaurant Registration Account:<br><br>
+				<div id="wrapper14">
+					<input type="radio" id="icon1" name="propic" value="1">
+					<label for="icon1"><img src="images/icon1.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon2" name="propic" value="2">
+					<label for="icon2"><img src="images/icon2.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon3" name="propic" value="3">
+					<label for="icon3"><img src="images/icon3.png" width="45px" height="45px"></label><br><br>
+					<input type="radio" id="icon4" name="propic" value="4">
+					<label for="icon4"><img src="images/icon4.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon5" name="propic" value="5">
+					<label for="icon5"><img src="images/icon5.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon6" name="propic" value="6">
+					<label for="icon6"><img src="images/icon6.png" width="45px" height="45px"></label>
+				</div>
+			</div>
 
-						By creating a restaurant registration account on our platform, you agree to our privacy policy and terms of service. We are committed to protecting your privacy and ensuring the security of your personal information.<br><br>
-						
-						We collect personal information such as your name, email, phone number, and address for the sole purpose of creating and maintaining your account. We will not sell or share your personal information with any third parties, except when required by law.<br><br>
-						
-						By using our platform, you agree to receive communications from us regarding your account and our services. You can opt-out of these communications at any time by contacting our support team.<br><br>
-						
-						We reserve the right to modify our privacy policy and terms of service at any time. By continuing to use our platform after any changes, you agree to the updated policies.<br><br>
-						
-						Thank you for choosing our platform for your restaurant registration needs.</h6>
-  				</div><br><br>
-
-            <label>
-                <input type="checkbox" name="myCheckbox" value="true" required>
-                By logging in, you agree to our privacy<br> policy & term of service
-            </label>
-            
-            <br><br>
-
-		    <button id="button2" >
-                Register Now
-            </button>
-		
-				<br>
-				<br>
-		
-			</main>
-		</div> 
-	</form>
+			<div id="wrapper9" style="display: inline-block; width: 50%; vertical-align: top;">
+				<main style="margin: 20px 0;">
+					<p>PRIVACY & POLICY</p><br>
+					<div class="scrollable-text">
+						<h6>Privacy Policy and Agreement for Restaurant Registration Account:<br><br>
+							By creating a restaurant registration account on our platform, you agree to our privacy policy and terms of service. We are committed to protecting your privacy and ensuring the security of your personal information.<br><br>
+								We collect personal information such as your name, email, phone number, and address for the sole purpose of creating and maintaining your account. We will not sell or share your personal information with any third parties, except when required by law.<br><br>
+								By using our platform, you agree to receive communications from us regarding your account and our services. You can opt-out of these communications at any time by contacting our support team.<br><br>
+								We reserve the right to modify our privacy policy and terms of service at any time. By continuing to use our platform after any changes, you agree to the updated policies.<br><br>
+								Thank you for choosing our platform for your restaurant registration needs.
+						</h6>
+					</div><br><br>
+					<label>
+						<input type="checkbox" name="privacyAgreement" value="true" required>
+						By logging in, you agree to our privacy policy & term of service
+					</label>
+					<br><br>
+					<button id="button2" type="submit">Register Now</button>
+					<br>
+					<br>
+				</main>
+			</div> 
+		</form>
 	</div>
-	
-
 </body>
-
-
 </html>

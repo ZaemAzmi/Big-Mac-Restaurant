@@ -1,6 +1,6 @@
 <?php
 
-$host = "localhost";
+/* $host = "localhost";
 $database = "webprogramming";
 $user = "user1";
 $pass = "user1abc";
@@ -13,6 +13,6 @@ if ( mysqli_connect_errno() ) {
     // die() is equivalent to exit()
 }
 
-echo "Database connected successfully<br><br>";
+echo "Database connected successfully<br><br>"; */
 
 ?>
