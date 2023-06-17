@@ -24,18 +24,26 @@ try {
     die("Database connection failed: " . $e->getMessage());
 }
 
-// Prepare and execute the SQL query to insert the data
-$sql = "INSERT INTO User_Info (name, phone, email, gender, birthday, username, password, propic) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([$name, $phone, $email, $gender, $birthday, $username, $password, $propic]);
+// Check for existing records
+$stmt = $pdo->prepare("SELECT * FROM User_Info WHERE username = ? OR email = ? OR phone = ?");
+$stmt->execute([$username, $email, $phone]);
 
-// Check if the insertion was successful
 if ($stmt->rowCount() > 0) {
-    // Redirect to login.html
-    header('Location: /Pr/login.html');
-    exit();
+    // Display error message and prompt user to enter unique details
+    echo "Username, email, or phone number is already in use. Please enter unique details.";
 } else {
-    echo "Registration failed.";
+    // Insert new record
+    $insertStmt = $pdo->prepare("INSERT INTO User_Info (name, phone, email, gender, birthday, username, password, propic) 
+                                VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $insertStmt->execute([$name, $phone, $email, $gender, $birthday, $username, $password, $propic]);
+
+    // Check if the insertion was successful
+    if ($insertStmt->rowCount() > 0) {
+        // Redirect to login.html
+        header('Location: /Pr/login.html');
+        exit();
+    } else {
+        echo "Registration failed.";
+    }
 }
 ?>
