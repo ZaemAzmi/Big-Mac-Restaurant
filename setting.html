@@ -77,7 +77,7 @@
             <form method="post" action="phpfile/update_details.php">
             <input type="hidden" id="username" name="username">
             <input type="hidden" name="itemToUpdate" value="name">
-            <input type="text" name="name-input" placeholder="Enter your name"><br><br>
+            <br><br><input type="text" name="name-input" placeholder="Enter your name" required><br><br>
             <button onclick="saveName()">Save</button>
         </form>
         </div>
@@ -88,7 +88,7 @@
             <form method="post" action="phpfile/update_details.php">
             <input type="hidden" id="username1" name="username">
             <input type="hidden" name="itemToUpdate" value="username">
-            <input type="text" name="username-input" placeholder="Enter your username"><br><br>
+            <br><br><input type="text" name="username-input" placeholder="Enter your username" required><br><br>
             <button onclick="saveUsername()">Save</button>
         </form>
         </div>
@@ -99,7 +99,7 @@
         <form method="post" action="phpfile/update_details.php">
             <input type="hidden" id="username2" name="username">
             <input type="hidden" name="itemToUpdate" value="email">
-            <input type="email" name="email-input" placeholder="Enter your email"><br><br>
+            <br><br><input type="email" name="email-input" placeholder="Enter your email" required><br><br>
             <button onclick="saveEmail()">Save</button>
         </form>
         </div>
@@ -110,7 +110,7 @@
             <form method="post" action="phpfile/update_details.php">
             <input type="hidden" id="username3" name="username">
             <input type="hidden" name="itemToUpdate" value="phone">
-            <input type="text" name="phone-input" placeholder="Enter your Phone number" pattern="\d{10,11}"><br><br>
+            <br><br><input type="text" name="phone-input" placeholder="Enter your Phone number" pattern="\d{10,11}"><br><br>
             <button onclick="savePhone()">Save</button>
         </form>
         </div>
@@ -119,9 +119,9 @@
 
         <div id="birthday-form" style="display: none;">
             <form method="post" action="phpfile/update_details.php">
-                <input type="hidden" id="username4" name="username">
-                <input type="hidden" name="itemToUpdate" value="birthday">
-            <input type="date" name="birthday-input" placeholder="Enter your birthday"><br><br>
+            <input type="hidden" id="username4" name="username">
+            <input type="hidden" name="itemToUpdate" value="birthday">
+            <br><br><input type="date" name="birthday-input" placeholder="Enter your birthday" required><br><br>
             <button onclick="saveBirthday()">Save</button>
         </form>
         </div>
@@ -131,7 +131,7 @@
         <div id="gender-form" style="display: none;">
             <form method="post" action="phpfile/update_details.php">
                 <input type="hidden" id="username5" name="username">
-                <input type="hidden" name="itemToUpdate" value="gender">
+                <input type="hidden" name="itemToUpdate" value="gender"><br><br>
                 <select name="gender-input" required>
                     <option value="">Please select</option>
                     <option value="Male">Male</option>
@@ -146,8 +146,7 @@
         <div id="picture-form" style="display: none;">
             <form method="post" action="phpfile/update_details.php">
                 <input type="hidden" id="username6" name="username">
-                <input type="hidden" name="itemToUpdate" value="picture">
-                <div id="wrapper14">
+                <input type="hidden" name="itemToUpdate" value="picture"><br><br>
 					<input type="radio" id="icon1" name="picture-input" value="1">
 					<label for="icon1"><img src="images/icon1.png" width="45px" height="45px"></label>
 					<input type="radio" id="icon2" name="picture-input" value="2">
@@ -160,7 +159,7 @@
 					<label for="icon5"><img src="images/icon5.png" width="45px" height="45px"></label>
 					<input type="radio" id="icon6" name="picture-input" value="6">
 					<label for="icon6"><img src="images/icon6.png" width="45px" height="45px"></label>
-				</div><br><br>
+				<br><br>
             <button onclick="savePicture()">Save</button>
         </form>
         </div>

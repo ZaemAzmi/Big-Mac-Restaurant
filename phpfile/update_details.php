@@ -59,7 +59,8 @@ switch ($itemToUpdate) {
 }
 
 if ($updateSuccess) {
-    echo "Update successful!";
+    header('Location: /Pr/setting.html');
+    
 } else {
     echo "Update failed!";
 }
