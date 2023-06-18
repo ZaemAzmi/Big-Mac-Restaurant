@@ -34,11 +34,22 @@
         </form>
         </div>
 
+        <button onclick="toggleForm('password-form')">PASSWORD</button> <br>
+
+        <div id="password-form" style="display: none;">
+            <form method="post" action="phpfile/update_user.php">
+            <input type="hidden" name="username7">
+            <input type="hidden" name="itemToUpdate" value="password">
+            <br><br><input type="text" name="password-input" placeholder="Enter your password" required><br><br>
+            <button onclick="saveName()">Save</button>
+        </form>
+        </div>
+
         <button onclick="toggleForm('username-form')">USERNAME</button> <br>
 
         <div id="username-form" style="display: none;">
             <form method="post" action="phpfile/update_user.php">
-            <input type="hidden" name="username">
+            <input type="hidden" name="username1">
             <input type="hidden" name="itemToUpdate" value="username">
             <br><br><input type="text" name="username-input" placeholder="Enter your username" required><br><br>
             <button onclick="saveUsername()">Save</button>
@@ -49,7 +60,7 @@
 
         <div id="email-form" style="display: none;">
         <form method="post" action="phpfile/update_user.php">
-            <input type="hidden" name="username">
+            <input type="hidden" name="username2">
             <input type="hidden" name="itemToUpdate" value="email">
             <br><br><input type="email" name="email-input" placeholder="Enter your email" required><br><br>
             <button onclick="saveEmail()">Save</button>
@@ -60,7 +71,7 @@
 
         <div id="phone-form" style="display: none;">
             <form method="post" action="phpfile/update_user.php">
-            <input type="hidden" name="username">
+            <input type="hidden" name="username3">
             <input type="hidden" name="itemToUpdate" value="phone">
             <br><br><input type="tel" name="phone-input" placeholder="Enter your Phone number" pattern="\d{10,11}"><br><br>
             <button onclick="savePhone()">Save</button>
@@ -71,7 +82,7 @@
 
         <div id="birthday-form" style="display: none;">
             <form method="post" action="phpfile/update_user.php">
-            <input type="hidden" name="username">
+            <input type="hidden" name="username4">
             <input type="hidden" name="itemToUpdate" value="birthday">
             <br><br><input type="date" name="birthday-input" placeholder="Enter your birthday" required><br><br>
             <button onclick="saveBirthday()">Save</button>
@@ -82,7 +93,7 @@
 
         <div id="gender-form" style="display: none;">
             <form method="post" action="phpfile/update_user.php">
-                <input type="hidden" name="username">
+                <input type="hidden" name="username5">
                 <input type="hidden" name="itemToUpdate" value="gender"><br><br>
                 <select name="gender-input" required>
                     <option value="">Please select</option>
@@ -97,7 +108,7 @@
 
         <div id="picture-form" style="display: none;">
             <form method="post" action="phpfile/update_user.php">
-                <input type="hidden" name="username">
+                <input type="hidden" name="username6">
                 <input type="hidden" name="itemToUpdate" value="picture"><br><br>
 					<input type="radio" id="icon1" name="picture-input" value="1">
 					<label for="icon1"><img src="images/icon1.png" width="45px" height="45px"></label>
@@ -130,6 +141,27 @@
     // Set the value of the username input field
     var usernameInput = document.querySelector('input[name="username"]');
     usernameInput.value = username;
+
+    var usernameInput1 = document.querySelector('input[name="username1"]');
+    usernameInput1.value = username;
+
+    var usernameInput2 = document.querySelector('input[name="username2"]');
+    usernameInput2.value = username;
+
+    var usernameInput3 = document.querySelector('input[name="username3"]');
+    usernameInput3.value = username;
+
+    var usernameInput4 = document.querySelector('input[name="username4"]');
+    usernameInput4.value = username;
+
+    var usernameInput5 = document.querySelector('input[name="username5"]');
+    usernameInput5.value = username;
+
+    var usernameInput6 = document.querySelector('input[name="username6"]');
+    usernameInput6.value = username;
+
+    var usernameInput7 = document.querySelector('input[name="username7"]');
+    usernameInput7.value = username;
 
     </script>
 
