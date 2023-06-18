@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigMac | Profile</title>
+    <link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="BigMac.css">
+        
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="scripts\LoginStatus.js" type="text/javascript"></script>
+
+</head>
+<body id="loginbody">
+
+    <button style="margin-top: 20px;" onclick="window.location.href='Adacc.html'">Back</button>
+
+<div style="margin-left: 510px; ">
+
+    <div id="wrapper35" style="display: inline-block; width: 50%; vertical-align: top;">
+    
+        <br><p id="title">CHOOSE DETAILS TO UPDATE</p> <br>
+        <button onclick="toggleForm('name-form')">NAME</button> <br>
+
+        <div id="name-form" style="display: none;">
+            <form method="post" action="phpfile/update_user.php">
+            <input type="hidden" name="username">
+            <input type="hidden" name="itemToUpdate" value="name">
+            <br><br><input type="text" name="name-input" placeholder="Enter your name" required><br><br>
+            <button onclick="saveName()">Save</button>
+        </form>
+        </div>
+
+        <button onclick="toggleForm('username-form')">USERNAME</button> <br>
+
+        <div id="username-form" style="display: none;">
+            <form method="post" action="phpfile/update_user.php">
+            <input type="hidden" name="username">
+            <input type="hidden" name="itemToUpdate" value="username">
+            <br><br><input type="text" name="username-input" placeholder="Enter your username" required><br><br>
+            <button onclick="saveUsername()">Save</button>
+        </form>
+        </div>
+
+        <button onclick="toggleForm('email-form')">EMAIL</button> <br>
+
+        <div id="email-form" style="display: none;">
+        <form method="post" action="phpfile/update_user.php">
+            <input type="hidden" name="username">
+            <input type="hidden" name="itemToUpdate" value="email">
+            <br><br><input type="email" name="email-input" placeholder="Enter your email" required><br><br>
+            <button onclick="saveEmail()">Save</button>
+        </form>
+        </div>
+
+        <button onclick="toggleForm('phone-form')">PHONE NUMBER</button> <br>
+
+        <div id="phone-form" style="display: none;">
+            <form method="post" action="phpfile/update_user.php">
+            <input type="hidden" name="username">
+            <input type="hidden" name="itemToUpdate" value="phone">
+            <br><br><input type="tel" name="phone-input" placeholder="Enter your Phone number" pattern="\d{10,11}"><br><br>
+            <button onclick="savePhone()">Save</button>
+        </form>
+        </div>
+
+        <button onclick="toggleForm('birthday-form')">BIRTHDAY</button> <br>
+
+        <div id="birthday-form" style="display: none;">
+            <form method="post" action="phpfile/update_user.php">
+            <input type="hidden" name="username">
+            <input type="hidden" name="itemToUpdate" value="birthday">
+            <br><br><input type="date" name="birthday-input" placeholder="Enter your birthday" required><br><br>
+            <button onclick="saveBirthday()">Save</button>
+        </form>
+        </div>
+
+        <button onclick="toggleForm('gender-form')">GENDER</button> <br>
+
+        <div id="gender-form" style="display: none;">
+            <form method="post" action="phpfile/update_user.php">
+                <input type="hidden" name="username">
+                <input type="hidden" name="itemToUpdate" value="gender"><br><br>
+                <select name="gender-input" required>
+                    <option value="">Please select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select><br><br>
+            <button onclick="saveGender()">Save</button>
+        </form>
+        </div>
+
+        <button onclick="toggleForm('picture-form')">PROFILE PICTURE</button> <br>
+
+        <div id="picture-form" style="display: none;">
+            <form method="post" action="phpfile/update_user.php">
+                <input type="hidden" name="username">
+                <input type="hidden" name="itemToUpdate" value="picture"><br><br>
+					<input type="radio" id="icon1" name="picture-input" value="1">
+					<label for="icon1"><img src="images/icon1.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon2" name="picture-input" value="2">
+					<label for="icon2"><img src="images/icon2.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon3" name="picture-input" value="3">
+					<label for="icon3"><img src="images/icon3.png" width="45px" height="45px"></label><br><br>
+					<input type="radio" id="icon4" name="picture-input" value="4">
+					<label for="icon4"><img src="images/icon4.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon5" name="picture-input" value="5">
+					<label for="icon5"><img src="images/icon5.png" width="45px" height="45px"></label>
+					<input type="radio" id="icon6" name="picture-input" value="6">
+					<label for="icon6"><img src="images/icon6.png" width="45px" height="45px"></label>
+				<br><br>
+            <button onclick="savePicture()">Save</button>
+        </form>
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="scripts\logout.js" type="text/javascript"></script>
+<script src="scripts\setting.js" type="text/javascript"></script>
+<script>// Get the username parameter from the URL
+    var urlParams = new URLSearchParams(window.location.search);
+    var username = urlParams.get('username');
+    
+    // Set the value of the username input field
+    var usernameInput = document.querySelector('input[name="username"]');
+    usernameInput.value = username;
+
+    </script>
+
+</body>
+
+
+</html>

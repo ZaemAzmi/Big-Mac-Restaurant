@@ -7,6 +7,7 @@ $(document).ready(function() {
       success: function(response) {
         if (response.loggedIn) {
           $("#logbutton").text("Welcome, " + response.username);
+          $("#logbutton1").text("Click to Log out");
           $("#logoutButton").show();
           $("#accicon").show();
           $("#username").val(response.username);

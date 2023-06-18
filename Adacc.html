@@ -11,7 +11,7 @@
 		<a href="Adacc.html" class="active">Manage Account</a> &nbsp; &nbsp;
 		<a href="Admenu.html">Manage Menu</a> &nbsp; &nbsp;
 		<a href="Adtable.php">Manage Table</a> &nbsp; &nbsp;
-		<button id="logbutton" onclick="location.href='Login.html'">Log Out</button>
+		<button id="logbutton1" onclick="logout()">Log Out</button>
 	</nav>
 	<main>
 		<div id="wrapper13">
@@ -38,68 +38,95 @@
 			</table>
 		</div>
 	</main>
-	<br><button id="savebut">SAVE</button>
+	<br>
 	<script>
-    $(document).ready(function() {
-  // Fetch user info from the PHP file for User_Info table
-  $.getJSON('phpfile/get_user_info.php', function(userData) {
-    // Fetch user info from the PHP file for Admin_Info table
-    $.getJSON('phpfile/get_admin_info.php', function(adminData) {
-      // Combine user and admin data into a single array
-      var data = userData.concat(adminData);
+   $(document).ready(function() {
+	// Fetch user info from the PHP file for User_Info table
+	$.getJSON('phpfile/get_user_info.php', function(userData) {
+		// Fetch user info from the PHP file for Admin_Info table
+		$.getJSON('phpfile/get_admin_info.php', function(adminData) {
+			// Combine user and admin data into a single array
+			var data = userData.concat(adminData);
 
-      // Generate HTML table rows
+			// Generate HTML table rows
       var rows = '';
-      $.each(data, function(index, user) {
-        rows += '<tr>';
-        rows += '<td>' + (index + 1) + '</td>';
-        rows += '<td class="username">' + user.username + '</td>';
-        rows += '<td>' + user.email + '</td>';
-        rows += '<td class="userType">' + (user.type === 'admin' ? 'Admin' : 'User') + '</td>';
-        rows += '<td>';
-        rows += '<p style="text-align: center;">';
-        rows += '<img src="images/editicon.png" alt="acc" width="30" height="30">&nbsp;&nbsp;';
-        rows += '<img id="' + (index + 1) + '" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">';
-        rows += '</p>';
-        rows += '</td>';
-        rows += '</tr>';
-      });
+$.each(data, function(index, user) {
+    rows += '<tr>';
+    rows += '<td>' + (index + 1) + '</td>';
+    rows += '<td class="username">' + user.username + '</td>';
+    rows += '<td>' + user.email + '</td>';
+    rows += '<td class="userType">' + (user.type === 'admin' ? 'Admin' : 'User') + '</td>';
+    rows += '<td>';
+    rows += '<p style="text-align: center;">';
+    rows += '<a href="editUser.html?username=' + encodeURIComponent(user.username) + '"><img src="images/editicon.png" alt="acc" width="30" height="30"></a>&nbsp;&nbsp;';
+    rows += '<img class="delete" data-username="' + user.username + '" src="images/delicon.png" alt="acc" width="30" height="30">';
+    rows += '</p>';
+    rows += '</td>';
+    rows += '</tr>';
+});
 
-      // Update the table body with the generated rows
-      $('#accTab tbody').html(rows);
-    });
-  });
 
-  // Filter table based on user type selection
-  $('#filter').on('change', function() {
-    var userType = $(this).val();
+			// Update the table body with the generated rows
+			$('#accTab tbody').html(rows);
 
-    // Show/hide rows based on user type
-    if (userType === 'user') {
-      $('.userType').each(function() {
-        var type = $(this).text();
-        if (type !== 'User') {
-          $(this).closest('tr').hide();
-        } else {
-          $(this).closest('tr').show();
-        }
-      });
-    } else if (userType === 'admin') {
-      $('.userType').each(function() {
-        var type = $(this).text();
-        if (type !== 'Admin') {
-          $(this).closest('tr').hide();
-        } else {
-          $(this).closest('tr').show();
-        }
-      });
-    } else {
-      $('tbody tr').show();
-    }
-  });
+			// Attach click event listener to delete buttons
+			$('.delete').on('click', function() {
+				var username = $(this).data('username');
+				var confirmation = confirm('Are you sure you want to delete the user "' + username + '"?');
+				if (confirmation) {
+					deleteUser(username);
+				}
+			});
+		});
+	});
+
+	// Filter table based on user type selection
+	$('#filter').on('change', function() {
+		var userType = $(this).val();
+
+		// Show/hide rows based on user type
+		if (userType === 'user') {
+			$('.userType').each(function() {
+				var type = $(this).text();
+				if (type !== 'User') {
+					$(this).closest('tr').hide();
+				} else {
+					$(this).closest('tr').show();
+				}
+			});
+		} else if (userType === 'admin') {
+			$('.userType').each(function() {
+				var type = $(this).text();
+				if (type !== 'Admin') {
+					$(this).closest('tr').hide();
+				} else {
+					$(this).closest('tr').show();
+				}
+			});
+		} else {
+			$('tbody tr').show();
+		}
+	});
+
+	// Function to delete a user
+	function deleteUser(username) {
+		$.ajax({
+			url: 'phpfile/delete_user.php',
+			type: 'POST',
+			data: { username: username },
+			success: function(response) {
+				alert('User deleted successfully!');
+				location.reload();
+			},
+			error: function(xhr, status, error) {
+				alert('Error deleting user: ' + error);
+			}
+		});
+	}
 });
 
   </script>
+  <script src="scripts\logout.js" type="text/javascript"></script>
   <!-- <script src="scripts\filterAcc.js" type="text/javascript"></script> -->
 </body>
 </html>
