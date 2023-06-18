@@ -94,7 +94,7 @@ if(isset($_GET['delete'])){
                 </li>
                 <!-- table -->
                 <li class="list">
-                    <a href="../Adtable.html" class="nav-link">
+                    <a href="adminTable.php" class="nav-link">
                         <i class='bx bxs-bookmark icon'></i>
                         <span class="link">Table</span>
                     </a>
@@ -174,7 +174,7 @@ if(isset($_GET['delete'])){
                         <td>RM<?php echo $row['price']; ?>/-</td>
                         <td><?php echo $row['description'] ?></td>
                         <!-- Action section -->
-                        <td>
+                        <td class="action">
                             <!-- edit fx -->
                             <a href="updatePage.php?edit=<?php echo $row['id']; ?>" class="edit">
                             <i class='bx bxs-edit btn-edit'></i>edit</a>

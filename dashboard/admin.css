@@ -300,6 +300,8 @@ button:active {
   padding: 1.3rem;
   border-radius: 5px;
   border-bottom: var(--border);
+  table-layout: fixed;
+  width: 180px;
 }
 .product-display .product-display-table th{
   padding: 1rem;
@@ -308,6 +310,9 @@ button:active {
 }
 
 /* action button */
+.action{
+  width: auto;
+}
 .edit{
   color: var(--text-color);
   background: var(--accent-color);

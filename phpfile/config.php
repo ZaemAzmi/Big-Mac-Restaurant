@@ -15,4 +15,6 @@ if ( mysqli_connect_errno() ) {
 
 echo "Database connected successfully<br><br>"; */
 
+$conn = mysqli_connect('localhost', 'root','','menu_db')
+
 ?>
