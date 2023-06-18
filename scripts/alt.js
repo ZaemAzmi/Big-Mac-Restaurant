@@ -49,6 +49,8 @@ function ready() {
 }
 // fx buy button
 function buyButtonClicked() {
+    insertCartData();
+    console.log("zaem");
     alert('Your Order is Placed')
     var cartContent = document.getElementsByClassName('cart-content')[0];
     while (cartContent.hasChildNodes()) {
@@ -147,25 +149,50 @@ function updateTotal() {
 // Insert items into cartdb
 function insertCartData() {
     // Get the item name, quantity, and price from the cart
-    var item_name = document.getElementById('item_name').value;
-    var quantity = document.getElementById('quantity').value;
+    var cartItems = document.getElementsByClassName('cart-box');
+    var cartData = [];
+  
+    for (var i = 0; i < cartItems.length; i++) {
+      var cartItem = cartItems[i];
+      var titleElement = cartItem.getElementsByClassName('cart-product-title')[0];
+      var quantityElement = cartItem.getElementsByClassName('cart-quantity')[0];
+      var priceElement = cartItem.getElementsByClassName('cart-price')[0];
+  
+      var item = {
+        Item: titleElement.innerText,
+        Quantity: parseInt(quantityElement.value),
+        Price: parseFloat(priceElement.innerText.replace("RM", ""))
+      };
+  
+      cartData.push(item);
+    }
   
     // Create a new FormData object
     var formData = new FormData();
-    formData.append('item_name', item_name);
-    formData.append('quantity', quantity);
-    formData.append('c', price);
+    formData.append('cartData', JSON.stringify(cartData));
   
-    // Call the PHP script to insert the cart data into the database
-    $.ajax({
-      url: 'phpfile/processCart.php',
-      type: 'POST',
-      data: formData,
-      success: function(data) {
-        // Do something with the success response
-      },
-      error: function(error) {
-        // Do something with the error response
+    // Send the cart data to the server for database insertion
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'phpfile/processCart.php', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          // Successful response from the server
+          var response = JSON.parse(xhr.responseText);
+          // Process the response as needed
+          if (response.status === 'success') {
+            // Database insertion successful
+            console.log('Data inserted successfully');
+          } else {
+            // Database insertion error
+            console.error('Error:', response.message);
+          }
+        } else {
+          // Error response from the server
+          console.error('Error:', xhr.status);
+        }
       }
-    });
+    };
+    xhr.send(formData);
   }
+  
