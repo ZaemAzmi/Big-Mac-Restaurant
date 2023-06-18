@@ -1,70 +1,59 @@
-// User class
-class User {
-    constructor(username, email, usertype) {
-      this.username = username;
-      this.email = email;
-      this.usertype = usertype;
-    }
-}
-
-  // Array of User objects
-  const users = [
-    new User("Affif720", "Affif720@gmail.com", "admin"),
-    new User("Zaem", "Zaem@gmail.com", "user"),
-    new User("HalimHensem", "Halim@Hotmail.com", "user"),
-    new User("Luqasparov", "Luqasparov@gmail.com", "admin"),
-    new User("Amirul", "Amirul@gmail.com", "user")
-  ];
-
-  // Get elements
-  const filter = document.querySelector("#filter");
-  const table = document.querySelector("#accTab");
-  const rows = document.querySelectorAll("tr");
+$(document).ready(function() {
+    // Fetch user info from the PHP file for User_Info table
+    $.getJSON('pr/phpfile/get_user_info.php', function(userData) {
+      // Fetch user info from the PHP file for Admin_Info table
+      $.getJSON('pr/phpfile/get_admin_info.php', function(adminData) {
+        // Combine user and admin data into a single array
+        var data = userData.concat(adminData);
   
-  filter.addEventListener("change", function(){
-    const userType = this.value;
-
-    const userAcc = users.filter((acc)=>acc.usertype=="user");
-    const adminAcc = users.filter((acc)=>acc.usertype=="admin");
-
-    if(userType=="user"){
-        userAcc.forEach((user)=>console.log(user.username));
-
-        for(var i=1; i<rows.length; i++){
-            var role = rows[i].querySelector("#userType");
-            if(role.textContent!="User"){
-                rows[i].style.display="none";
-            }else{
-                rows[i].style.display="table-row";
-            }
-        }
-    }else if(userType=="admin"){
-        adminAcc.forEach((admin)=>console.log(admin.username));
-
-        for(var i=1; i<rows.length; i++){
-            var role = rows[i].querySelector("#userType");
-            if(role.textContent!="Admin"){
-                rows[i].style.display="none";
-            }else{
-                rows[i].style.display="table-row";
-            }
-        }
-    }else{
-        users.forEach((user)=>console.log(user.username));
-
-        for(var i=1; i<rows.length; i++){
-            var role = rows[i].querySelector("#userType");
-
-            if(role.textContent=="null"){
-                rows[i].style.display="none";
-            }else{
-                rows[i].style.display="table-row";
-            }
-            
-        }
-    }
-
-});
-
+        // Generate HTML table rows
+        var rows = '';
+        $.each(data, function(index, user) {
+          rows += '<tr>';
+          rows += '<td>' + (index + 1) + '</td>';
+          rows += '<td class="username">' + user.username + '</td>';
+          rows += '<td>' + user.email + '</td>';
+          rows += '<td class="userType">' + (user.type === 'admin' ? 'Admin' : 'User') + '</td>';
+          rows += '<td>';
+          rows += '<p style="text-align: center;">';
+          rows += '<img src="images/editicon.png" alt="acc" width="30" height="30">&nbsp;&nbsp;';
+          rows += '<img id="' + (index + 1) + '" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">';
+          rows += '</p>';
+          rows += '</td>';
+          rows += '</tr>';
+        });
   
+        // Update the table body with the generated rows
+        $('#accTab tbody').html(rows);
+      });
+    });
+  
+    // Filter table based on user type selection
+    $('#filter').on('change', function() {
+      var userType = $(this).val();
+  
+      // Show/hide rows based on user type
+      if (userType === 'user') {
+        $('.userType').each(function() {
+          var type = $(this).text();
+          if (type !== 'User') {
+            $(this).closest('tr').hide();
+          } else {
+            $(this).closest('tr').show();
+          }
+        });
+      } else if (userType === 'admin') {
+        $('.userType').each(function() {
+          var type = $(this).text();
+          if (type !== 'Admin') {
+            $(this).closest('tr').hide();
+          } else {
+            $(this).closest('tr').show();
+          }
+        });
+      } else {
+        $('tbody tr').show();
+      }
+    });
+  });
   

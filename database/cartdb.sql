@@ -24,40 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `bookingdb`
+-- Table structure for table `cartdb`
 --
 
-CREATE TABLE `bookingdb` (
-  `BookingID` int(11) NOT NULL,
-  `Username` varchar(255) DEFAULT NULL,
-  `Name` varchar(255) NOT NULL,
-  `Phone Number` int(11) NOT NULL,
-  `Date and Time` datetime NOT NULL,
-  `Amount People` varchar(255) NOT NULL,
-  `Table Number` int(11) NOT NULL
+CREATE TABLE `cartdb` (
+  `Username` varchar(255) NOT NULL,
+  `Item` varchar(255) NOT NULL,
+  `Quantity` int(11) NOT NULL,
+  `Price` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `bookingdb`
---
-ALTER TABLE `bookingdb`
-  ADD PRIMARY KEY (`BookingID`),
-  ADD KEY `Table` (`Table Number`),
-  ADD KEY `Cart` (`Username`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `bookingdb`
---
-ALTER TABLE `bookingdb`
-  MODIFY `BookingID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
