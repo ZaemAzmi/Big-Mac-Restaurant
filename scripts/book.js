@@ -74,7 +74,7 @@ function checkInputs(){
           // Handle response
           if (response.ok) {
             // Redirect to TableSelection.html
-            window.location.href = 'TableSelection.html';
+            window.location.href = 'phpfile/TableSelection.php';
           } else {
             // Handle error
             console.error('Form submission failed.');
