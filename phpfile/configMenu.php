@@ -1,11 +1,6 @@
 <?php
 
-$host = "localhost";
-$database = "webprogramming";
-$user = "root";
-$pass = "";
-
-$conn = mysqli_connect($host, $user, $pass, $database);
+$connMenu = mysqli_connect('localhost', 'root','','menu_db')
 
 if ( mysqli_connect_errno() ) {
   echo "Database connection failed";
@@ -14,6 +9,4 @@ if ( mysqli_connect_errno() ) {
 }
 
 echo "Database connected successfully<br><br>";
-
-//$connMenu = mysqli_connect('localhost', 'root','','menu_db')
 ?>
