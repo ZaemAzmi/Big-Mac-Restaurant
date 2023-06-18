@@ -958,7 +958,7 @@ label {
 .tableBooked {
 	width: 100px;
 	height: 30px;
-	background-color: rgba(217, 217, 217, 0.5);;
+	background-color: rgba(217, 217, 217, 0.5);
 	font-style: italic;
 	font-weight: 600;
 	border: 2px solid black;
@@ -968,6 +968,7 @@ label {
 	line-height: 30px;
 	font-size: 18px;
 	border-radius: 10px;
+	cursor: default;
 }
 
 #buttonContainer{

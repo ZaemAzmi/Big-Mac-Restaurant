@@ -1,6 +1,11 @@
 <?php
 // Check if the 'cartData' key is present in the POST request
 if (isset($_POST['cartData'])) {
+    // Retrieve the 'Username' and 'Name' values from the session
+    session_start();
+    $username = $_SESSION['username'];
+    $name = $_SESSION['name'];
+
     // Decode the 'cartData' JSON and assign it to $cartData variable
     $cartData = json_decode($_POST['cartData'], true);
 
@@ -18,11 +23,13 @@ if (isset($_POST['cartData'])) {
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             // Prepare the insert statement
-            $stmt = $pdo->prepare("INSERT INTO cartdb (Item, Quantity, Price) VALUES (:Item, :Quantity, :Price)");
+            $stmt = $pdo->prepare("INSERT INTO cartdb (Username, Name, Item, Quantity, Price) VALUES (:Username, :Name, :Item, :Quantity, :Price)");
 
             // Iterate over the cart data and insert each item into the database
             foreach ($cartData as $item) {
                 $stmt->execute([
+                    'Username' => $username,
+                    'Name' => $name,
                     'Item' => $item['Item'],
                     'Quantity' => $item['Quantity'],
                     'Price' => $item['Price']
