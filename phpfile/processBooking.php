@@ -15,11 +15,11 @@ $_SESSION['dateTime'] = $dateTime;
 $_SESSION['people'] = $people;
 
 $sql="INSERT INTO bookingdb ( `Name`, `Phone Number`, `Date and Time`, `Amount People`) VALUES (?, ?, ?, ?)";
-$statement = $connection->prepare($sql);
+$statement = $conn->prepare($sql);
 $statement->bind_param("siss", $name, $phoneNum, $dateTime, $people);
 $statement->execute();
 
 $statement->close();
-$connection->close();
+$conn->close();
 
 ?>
