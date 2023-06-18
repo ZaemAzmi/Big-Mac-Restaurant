@@ -62,7 +62,7 @@ if(isset($_GET['delete'])){
             <div class="group-right-nav">
             <!-- Cart-ICon -->
             <i class='bx bx-cart' id="cart-icon"></i>
-            <button class="btn-login" onclick="location.href='Login.html'">login</button>
+            <button class="btn-login" onclick="location.href='../Login.html'">login</button>
             </div>
             <!-- Order Section -->
             <div class="cart">
