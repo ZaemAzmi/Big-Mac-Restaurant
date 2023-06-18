@@ -143,7 +143,7 @@ function updateTotal() {
     var price = total;
 
     document.getElementsByClassName('total-price')[0].innerText = "RM" + total;
-
+    return total;
 }
 
 // Insert items into cartdb
@@ -166,11 +166,12 @@ function insertCartData() {
   
       cartData.push(item);
     }
-  
+    
+    
     // Create a new FormData object
     var formData = new FormData();
     formData.append('cartData', JSON.stringify(cartData));
-  
+    // formData.append('bookingData', JSON.stringify(bookingData));
     // Send the cart data to the server for database insertion
     var xhr = new XMLHttpRequest();
     xhr.open('POST', 'phpfile/processCart.php', true);

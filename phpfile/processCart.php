@@ -1,15 +1,16 @@
 <?php
-// Check if the 'cartData' key is present in the POST request
+// Check if the 'cartData' and 'bookingData' keys are present in the POST request
 if (isset($_POST['cartData'])) {
     // Retrieve the 'Username' and 'Name' values from the session
     session_start();
     $username = $_SESSION['username'];
     $name = $_SESSION['name'];
 
-    // Decode the 'cartData' JSON and assign it to $cartData variable
+    // Decode the 'cartData' and 'bookingData' JSON and assign them to variables
     $cartData = json_decode($_POST['cartData'], true);
+    // $bookingData = json_decode($_POST['bookingData'], true);
 
-    // Check if $cartData is an array
+    // Check if $cartData and $bookingData are arrays
     if (is_array($cartData)) {
         // Database connection configuration
         $host = "localhost";
@@ -22,12 +23,10 @@ if (isset($_POST['cartData'])) {
             $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $password);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // Prepare the insert statement
-            $stmt = $pdo->prepare("INSERT INTO cartdb (Username, Name, Item, Quantity, Price) VALUES (:Username, :Name, :Item, :Quantity, :Price)");
-
-            // Iterate over the cart data and insert each item into the database
+            // Insert cart data into 'cartdb' table
+            $stmtCart = $pdo->prepare("INSERT INTO cartdb (Username, Name, Item, Quantity, Price) VALUES (:Username, :Name, :Item, :Quantity, :Price)");
             foreach ($cartData as $item) {
-                $stmt->execute([
+                $stmtCart->execute([
                     'Username' => $username,
                     'Name' => $name,
                     'Item' => $item['Item'],
@@ -36,6 +35,13 @@ if (isset($_POST['cartData'])) {
                 ]);
             }
 
+            // Insert booking data into 'bookingdb' table
+            // $stmtBooking = $pdo->prepare("INSERT INTO bookingdb (Price) VALUES (:Price)");
+            // $stmtBooking->execute([
+            //     'Price' => $totalPrice
+
+            // ]);
+
             // Send a success response
             echo json_encode(['status' => 'success']);
         } catch (PDOException $e) {
@@ -43,11 +49,11 @@ if (isset($_POST['cartData'])) {
             echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
         }
     } else {
-        // Invalid cartData format
-        echo json_encode(['status' => 'error', 'message' => 'Invalid cart data format']);
+        // Invalid cartData or bookingData format
+        echo json_encode(['status' => 'error', 'message' => 'Invalid cart or booking data format']);
     }
 } else {
-    // cartData key not found in the POST request
-    echo json_encode(['status' => 'error', 'message' => 'cartData key not found']);
+    // cartData or bookingData key not found in the POST request
+    echo json_encode(['status' => 'error', 'message' => 'cartData or bookingData key not found']);
 }
 ?>
