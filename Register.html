@@ -4,6 +4,8 @@
 	<link rel="stylesheet" href="BigMac.css">
 	<link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
 	<script src="scripts/validatepass.js" type="text/javascript"></script>
+	<script src="scripts/calculateage.js" type="text/javascript"></script>
+
 </head>
 <body id="loginbody">
 	<nav>
@@ -26,7 +28,8 @@
 						<option value="Male">Male</option>
 						<option value="Female">Female</option>
 					</select> <br><br>
-					<label>Birthday: <br><input type="date" name="birthday"></label> <br><br>
+					<label>Brithday: <br><input type="date" id="birthday" name="birthday" onchange="return calculateAge()" required></label>
+					<input type="hidden" id="age" name="age"></input> <br><br>
 				</main>
 			</div>
 

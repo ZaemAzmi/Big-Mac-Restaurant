@@ -5,6 +5,7 @@ $phone = $_POST['phone'];
 $email = $_POST['email'];
 $gender = $_POST['gender'];
 $birthday = $_POST['birthday'];
+$age = $_POST['age'];
 $username = $_POST['username'];
 $password = $_POST['password'];
 $propic = $_POST['propic'];
@@ -25,10 +26,10 @@ try {
 }
 
 // Prepare and execute the SQL query to insert the data
-$sql = "INSERT INTO User_Info (name, phone, email, gender, birthday, username, password, propic) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO User_Info (name, phone, email, gender, birthday, username, password, propic,age) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = $pdo->prepare($sql);
-$stmt->execute([$name, $phone, $email, $gender, $birthday, $username, $password, $propic]);
+$stmt->execute([$name, $phone, $email, $gender, $birthday, $username, $password, $propic, $age]);
 
 // Check if the insertion was successful
 if ($stmt->rowCount() > 0) {
