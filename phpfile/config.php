@@ -12,8 +12,4 @@ if ( mysqli_connect_errno() ) {
    die( mysqli_connect_error() );
     // die() is equivalent to exit()
 }
-
-echo "Database connected successfully<br><br>";
-
-//$connMenu = mysqli_connect('localhost', 'root','','menu_db')
 ?>

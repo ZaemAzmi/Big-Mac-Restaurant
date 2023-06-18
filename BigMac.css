@@ -123,6 +123,17 @@ header{
 	left: 58%; /* Added to center horizontally */
 	transform: translateX(-50%); /* Added to center horizontally */
   }
+
+  #logbutton {
+	background-color: black;
+	color: white;
+	border-radius: 100px;
+}
+
+#logbutton:hover {
+	background-color: white;
+	color: black;
+}
   
   
 
@@ -391,7 +402,7 @@ nav {
 
 nav a {
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 nav a:hover {
@@ -399,7 +410,7 @@ nav a:hover {
 }
 
 nav a.active {
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid black;
 	padding-bottom: 3px;
 
 }
@@ -772,16 +783,19 @@ button:hover {
 	color: white;
 }
 
-#logbutton {
+#logbutton1 {
 	background-color: black;
+	position: absolute;
+	margin-left: 1350px;
 	color: white;
 	border-radius: 100px;
 }
 
-#logbutton:hover {
+#logbutton1:hover {
 	background-color: white;
 	color: black;
 }
+
 
 #prodetails {
 	color: black;
@@ -944,7 +958,7 @@ label {
 .tableBooked {
 	width: 100px;
 	height: 30px;
-	background-color: rgba(217, 217, 217, 0.5);;
+	background-color: rgba(217, 217, 217, 0.5);
 	font-style: italic;
 	font-weight: 600;
 	border: 2px solid black;
@@ -954,6 +968,7 @@ label {
 	line-height: 30px;
 	font-size: 18px;
 	border-radius: 10px;
+	cursor: default;
 }
 
 #buttonContainer{

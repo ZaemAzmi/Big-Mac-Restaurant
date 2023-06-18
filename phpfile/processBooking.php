@@ -4,6 +4,7 @@ include_once("config.php");
 
 session_start();
 
+$username = $_SESSION['username'];
 $name = $_POST["Name"];
 $phoneNum = $_POST["PhoneNum"];
 $dateTime = $_POST["DateTime"];
@@ -14,9 +15,9 @@ $_SESSION['phoneNum'] = $phoneNum;
 $_SESSION['dateTime'] = $dateTime;
 $_SESSION['people'] = $people;
 
-$sql="INSERT INTO bookingdb ( `Name`, `Phone Number`, `Date and Time`, `Amount People`) VALUES (?, ?, ?, ?)";
+$sql="INSERT INTO bookingdb ( `Username`, `Name`, `Phone Number`, `Date and Time`, `Amount People`) VALUES (?, ?, ?, ?, ?)";
 $statement = $conn->prepare($sql);
-$statement->bind_param("siss", $name, $phoneNum, $dateTime, $people);
+$statement->bind_param("ssiss", $username, $name, $phoneNum, $dateTime, $people);
 $statement->execute();
 
 $statement->close();

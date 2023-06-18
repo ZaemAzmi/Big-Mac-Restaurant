@@ -1,19 +1,23 @@
 <?php
-
 include_once("config.php");
 
 session_start();
 
 $table = $_POST["tableNumber"];
+$username = $_SESSION['username'];
+$name = $_SESSION['name'];
 
-$_SESSION['table'] = $table;
-
-$sql="UPDATE bookingdb SET `Table Number` = ? WHERE Name = ?";
+$sql = "UPDATE bookingdb SET `Table Number` = ? WHERE Username = ? AND Name = ?";
 $statement = $conn->prepare($sql);
-$statement->bind_param("ss", $table, $_SESSION['name']);
+$statement->bind_param("iss", $table, $username, $name);
+$statement->execute();
+
+$booked = "Booked";
+$sql = "UPDATE tabledb SET `Status` = ? WHERE `Table Number` = ?";
+$statement = $conn->prepare($sql);
+$statement->bind_param("si", $booked, $table);
 $statement->execute();
 
 $statement->close();
 $conn->close();
-
 ?>

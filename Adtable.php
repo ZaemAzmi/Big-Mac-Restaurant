@@ -38,11 +38,9 @@
                         <th>Username</th>
                         <th>Name</th>
                         <th>Phone Number</th>
-                        <th>Total Cost</th>
-                        <th>Table Number</th>
-                        <th>Customer quantity</th>
                         <th>Booking Date</th>
-                        <th>Menu</th>
+                        <th>Customer quantity</th>
+                        <th>Table Number</th>
                         
                     </tr>
                 </thead>
