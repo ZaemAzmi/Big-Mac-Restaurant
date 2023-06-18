@@ -321,6 +321,7 @@ hr{
     animation-fill-mode: none;
 
 }
+
 @keyframes moving{
     from{
         transform: translateX(0px);

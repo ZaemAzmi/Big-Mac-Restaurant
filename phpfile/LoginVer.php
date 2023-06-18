@@ -1,6 +1,4 @@
 <?php
-
-include "config.php";
 // Database connection details
 $host = 'sql12.freesqldatabase.com';
 $dbName = 'sql12625052';
@@ -18,13 +16,20 @@ if (!$connection) {
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the username and password from the form
+    // Get the username, password, and login option from the form
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $loginOption = $_POST["loginAs"];
     
-    // Query the database to check if the user exists
-    $query = "SELECT * FROM User_Info WHERE username = '$username' AND password = '$password'";
-    $result = mysqli_query($connection, $query);
+    // Set the table name based on the login option
+    $tableName = ($loginOption === "admin") ? "Admin_Info" : "User_Info";
+
+    // Prepare the query to prevent SQL injection
+    $query = "SELECT * FROM $tableName WHERE username = ? AND password = ?";
+    $statement = mysqli_prepare($connection, $query);
+    mysqli_stmt_bind_param($statement, "ss", $username, $password);
+    mysqli_stmt_execute($statement);
+    $result = mysqli_stmt_get_result($statement);
 
     if (mysqli_num_rows($result) == 1) {
         // User exists, login successful
@@ -42,15 +47,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['age'] = $user['age'];
         $_SESSION['propic'] = $user['propic'];
 
-        // Redirect to the home page or profile page
-        header("Location: /Pr/index.html");
-        exit(); // Terminate the current script to prevent further execution
+        echo "success";
+        exit(); // Terminate the script after sending the response
     } else {
         // User doesn't exist or incorrect credentials
-        echo "Invalid username or password!";
+        echo "invalid";
+        exit(); // Terminate the script after sending the response
     }
 }
 
-// Close the database connection
+// Close the statement and database connection
+mysqli_stmt_close($statement);
 mysqli_close($connection);
 ?>

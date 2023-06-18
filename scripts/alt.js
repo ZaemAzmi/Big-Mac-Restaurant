@@ -52,6 +52,7 @@ function buyButtonClicked() {
     alert('Your Order is Placed')
     var cartContent = document.getElementsByClassName('cart-content')[0];
     while (cartContent.hasChildNodes()) {
+        insertCartData();
         cartContent.removeChild(cartContent.firstChild);
     }
     updateTotal();
@@ -94,6 +95,7 @@ function addProductToCart(title, price, productImg) {
     cartShopBox.classList.add('cart-box');
     var cartItems = document.getElementsByClassName('cart-content')[0];
     var cartItemsNames = cartItems.getElementsByClassName('cart-product-title');
+    var item_name = cartItemsNames;
     for (var i = 0; i < cartItemsNames.length; i++) {
         if (cartItemsNames[i].innerText == title) {
             alert("Already add this item to cart");
@@ -138,7 +140,34 @@ function updateTotal() {
     }
     // If price have cents or float value
     total = Math.round(total * 100) / 100;
+    var price = total;
 
     document.getElementsByClassName('total-price')[0].innerText = "RM" + total;
 
 }
+
+// Insert items into cartdb
+function insertCartData(var itemName, var quantity) {
+    // Get the item name, quantity, and price from the cart
+    var item_name = document.getElementById('item_name').value;
+    var quantity = document.getElementById('quantity').value;
+  
+    // Create a new FormData object
+    var formData = new FormData();
+    formData.append('item_name', item_name);
+    formData.append('quantity', quantity);
+    formData.append('price', price);
+  
+    // Call the PHP script to insert the cart data into the database
+    $.ajax({
+      url: 'phpfile/processCart.php',
+      type: 'POST',
+      data: formData,
+      success: function(data) {
+        // Do something with the success response
+      },
+      error: function(error) {
+        // Do something with the error response
+      }
+    });
+  }

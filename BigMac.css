@@ -583,12 +583,12 @@ nav a.active {
 #wrapper9 {
 	background-color: black;
 	padding: 20px;
-	margin-top: 50px;
+	margin-top: 20px;
 	margin-right: 20px;
 	margin-left: auto;
 	min-width: 200px;
 	max-width: 400px;
-	height: 500px;
+	height: 570px;
 	text-align: left;
 	display: block;
 	border-radius: 10px;
@@ -941,6 +941,21 @@ label {
 	background-color: #87CEEB; /* Change background color on hover */
 }
 
+.tableBooked {
+	width: 100px;
+	height: 30px;
+	background-color: rgba(217, 217, 217, 0.5);;
+	font-style: italic;
+	font-weight: 600;
+	border: 2px solid black;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	line-height: 30px;
+	font-size: 18px;
+	border-radius: 10px;
+}
+
 #buttonContainer{
 	display: flex;
     justify-content: space-between;
@@ -983,6 +998,7 @@ label {
 .previous:hover {
 	background-color: #135cbb; /* Change background color on hover */
 }
+
 
 
 

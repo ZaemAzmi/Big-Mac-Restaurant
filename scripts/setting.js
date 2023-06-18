@@ -41,7 +41,7 @@ function toggleForm(formId) {
 
         // Add line breaks between the buttons
         for (var m = 0; m < buttons.length - 1; m++) {
-            buttons[m].insertAdjacentHTML('afterend', '<br>');
+            buttons[m].insertAdjacentHTML('afterend', '<br><br>');
         }
     }
 }
@@ -61,6 +61,9 @@ function saveUsername() {
     var username = document.getElementById('username-input').value;
 
     // Perform actions with the updated username (e.g., save to a database)
+
+    // Update the displayed name on the page
+    document.getElementById('username').textContent = name;
 
     toggleForm('username-form');
 }
