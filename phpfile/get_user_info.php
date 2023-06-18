@@ -10,8 +10,8 @@ $port = 3306;
 $dsn = "mysql:host=$host;dbname=$dbName;port=$port";
 $pdo = new PDO($dsn, $user, $password);
 
-// Retrieve username and email from User_Info table
-$query = 'SELECT username, email, "user" as type FROM User_Info';
+// Retrieve all data from the User_Info table
+$query = 'SELECT * FROM User_Info';
 $stmt = $pdo->query($query);
 $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

@@ -391,7 +391,7 @@ nav {
 
 nav a {
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 nav a:hover {
@@ -399,7 +399,7 @@ nav a:hover {
 }
 
 nav a.active {
-	border-bottom: 2px solid white;
+	border-bottom: 2px solid black;
 	padding-bottom: 3px;
 
 }
@@ -782,6 +782,20 @@ button:hover {
 	background-color: white;
 	color: black;
 }
+
+#logbutton1 {
+	background-color: black;
+	position: absolute;
+	margin-left: 1350px;
+	color: white;
+	border-radius: 100px;
+}
+
+#logbutton1:hover {
+	background-color: white;
+	color: black;
+}
+
 
 #prodetails {
 	color: black;
