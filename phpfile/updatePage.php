@@ -1,5 +1,5 @@
 <?php
-@include 'config.php';
+@include 'configMenu.php';
 // 'edit' follow on (line98:'?edit=') adminPage.php  
 $id = $_GET['edit'];
 // 'edit_product' (line61: 'name="edit_product"') updatePage.php
@@ -19,7 +19,7 @@ if(isset($_POST['edit_product'])){
         // Change $insert => $update || INSERT TO => UPDATE
         $update = "UPDATE products SET name='$product_name', price='$product_price', image='$product_image', description='$product_description'
         WHERE id=$id";
-        $upload = mysqli_query($conn, $update);
+        $upload = mysqli_query($connMenu, $update);
         if($upload){
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
             $message[] = 'update product successfuly';
@@ -56,7 +56,7 @@ if(isset($message)){
     <div class="container center"></div>
     <!--  -->
     <?php
-    $select = mysqli_query($conn, "SELECT * FROM products WHERE id=$id");
+    $select = mysqli_query($connMenu, "SELECT * FROM products WHERE id=$id");
     while($row = mysqli_fetch_assoc($select)){
     ?>
     <!-- Form edit Product -->

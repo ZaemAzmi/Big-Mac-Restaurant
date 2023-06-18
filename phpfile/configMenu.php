@@ -1,6 +1,6 @@
 <?php
 
-$connMenu = mysqli_connect('localhost', 'root','','menu_db')
+$connMenu = mysqli_connect('localhost', 'root','','menu_db');
 
 if ( mysqli_connect_errno() ) {
   echo "Database connection failed";

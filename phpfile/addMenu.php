@@ -1,5 +1,5 @@
 <?php
-@include 'config.php';
+@include 'configMenu.php';
 if(isset($_POST['add_product'])){
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
@@ -15,7 +15,7 @@ if(isset($_POST['add_product'])){
         // Insert data from php to database
         $insert = "INSERT INTO products(name, price, description, image) VALUES('$product_name','$product_price',
         '$product_description','$product_image')";
-        $upload = mysqli_query($conn, $insert);
+        $upload = mysqli_query($connMenu, $insert);
         if($upload){
             move_uploaded_file($product_image_tmp_name, $product_image_folder);
             $message[] = 'new product added successfuly';
