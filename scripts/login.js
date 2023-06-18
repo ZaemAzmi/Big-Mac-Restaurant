@@ -9,7 +9,7 @@ form.addEventListener("submit", function (event) {
     if (username.value === "admin" && password.value === "admin123" && loginOption.value === "admin") {
         form.action = "Adacc.html";
         form.submit();
-    } else if (username.value === "user" && password.value === "user" && loginOption.value === "user") {
+    } else if (username.value === "user" && password.value === "user123" && loginOption.value === "user") {
         form.action = "Profile.html";
         form.submit();
     } else {
