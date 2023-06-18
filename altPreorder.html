@@ -11,6 +11,10 @@
 
     <!-- Link Boxicon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="scripts/LoginStatus.js" type="text/javascript"></script>
     
 </head>
 <body class="bodyPage">
@@ -29,7 +33,18 @@
             <div class="group-right-nav">
             <!-- Cart-ICon -->
             <i class='bx bx-cart' id="cart-icon"></i>
-            <button class="btn-login" onclick="location.href='Login.html'">login</button>
+            <div class="dropdown">
+                <div class="vertical-center">
+                  <img src="images/accicon.png" alt="acc" width="30" height="30" id="accicon">
+                  <button id="logbutton">Login</button>
+                  <div class="dropdown-content" id="dropdownContainer">
+                    <!-- Dropdown items -->
+                    <a id="logoutButton" onclick="logout()">Log Out</a>
+                    <a href="setting.html">Setting</a>
+                    <a href="Profile.html">Profile</a>
+                  </div>
+                </div>
+                </div>
             </div>
             <!-- Order Section -->
             <div class="cart">
@@ -151,7 +166,6 @@
     <!-- Link to JavaSrcipt -->
     <script src="scripts/alt.js"></script>
     
-	<script src="scripts\LoginStatus.js" type="text/javascript"></script>
     <script src="scripts\logout.js" type="text/javascript"></script>
 
 </body>

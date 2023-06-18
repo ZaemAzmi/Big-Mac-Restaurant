@@ -73,7 +73,7 @@ function checkInputs(){
         .then(response => {
           // Handle response
           if (response.ok) {
-            // Redirect to TableSelection.html
+            // Redirect to TableSelection.php
             window.location.href = 'phpfile/TableSelection.php';
           } else {
             // Handle error

@@ -123,6 +123,17 @@ header{
 	left: 58%; /* Added to center horizontally */
 	transform: translateX(-50%); /* Added to center horizontally */
   }
+
+  #logbutton {
+	background-color: black;
+	color: white;
+	border-radius: 100px;
+}
+
+#logbutton:hover {
+	background-color: white;
+	color: black;
+}
   
   
 
@@ -770,17 +781,6 @@ button:hover {
 #button2:hover {
 	background-color: rgba(0, 3, 169, 0.8);
 	color: white;
-}
-
-#logbutton {
-	background-color: black;
-	color: white;
-	border-radius: 100px;
-}
-
-#logbutton:hover {
-	background-color: white;
-	color: black;
 }
 
 #logbutton1 {

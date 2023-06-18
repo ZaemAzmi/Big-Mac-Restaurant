@@ -89,6 +89,67 @@ header{
     color: var(--text-color);
     font-weight: 400;
 }
+
+.group-right-nav {
+	display: flex;
+	align-items: center;
+  }
+  
+  .vertical-center {
+	display: flex;
+	align-items: center;
+  }
+  
+  .dropdown {
+	position: relative;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	top: calc(100% + 5px); /* Adjusted to position below the log button */
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	background-color: #f9f9f9;
+	width: 150px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-content a {
+	display: block;
+	padding: 5px 10px;
+	border-bottom: 1px solid #ccc;
+  }
+  
+  .dropdown-content a:last-child {
+	border-bottom: none;
+  }
+  
+  .dropdown-content a:hover {
+	background-color: #ddd;
+  }
+  
+  .dropdown:hover .dropdown-content {
+	display: block;
+	left: 58%; /* Added to center horizontally */
+	transform: translateX(-50%); /* Added to center horizontally */
+  }
+
+  #logbutton {
+	background-color: black;
+	color: white;
+	border-radius: 100px;
+}
+
+#logbutton:hover {
+	background-color: white;
+	color: black;
+}
+  
 /* Nav end */
 
 #cart-icon{
