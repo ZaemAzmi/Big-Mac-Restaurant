@@ -1,6 +1,4 @@
 <?php
-
-include "config.php";
 // Database connection details
 $host = 'sql12.freesqldatabase.com';
 $dbName = 'sql12625052';
@@ -18,12 +16,14 @@ if (!$connection) {
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the username and password from the form
+    // Get the username, password, and login option from the form
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $loginOption = $_POST["loginAs"];
     
-    // Query the database to check if the user exists
-    $query = "SELECT * FROM User_Info WHERE username = '$username' AND password = '$password'";
+    // Query the respective table based on the login option
+    $tableName = ($loginOption === "admin") ? "Admin_Info" : "User_Info";
+    $query = "SELECT * FROM $tableName WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($connection, $query);
 
     if (mysqli_num_rows($result) == 1) {
@@ -42,8 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['age'] = $user['age'];
         $_SESSION['propic'] = $user['propic'];
 
-        // Redirect to the home page or profile page
-        header("Location: /Pr/index.html");
+        // Redirect to the home page or profile page based on the login option
+        if ($loginOption === "admin") {
+            header("Location: /Pr/Adacc.html");
+        } else {
+            header("Location: /Pr/index.html");
+        }
         exit(); // Terminate the current script to prevent further execution
     } else {
         // User doesn't exist or incorrect credentials
