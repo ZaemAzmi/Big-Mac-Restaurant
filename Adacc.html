@@ -1,174 +1,105 @@
+<!DOCTYPE html>
 <html>
-	
-	<head>
-		<title>
-			BigMac Restaurant
-		</title>
+<head>
+	<title>BigMac Restaurant</title>
+	<link rel="stylesheet" href="BigMac.css">
+	<link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body id="bodyhome">
+	<nav>
+		<a href="Adacc.html" class="active">Manage Account</a> &nbsp; &nbsp;
+		<a href="Admenu.html">Manage Menu</a> &nbsp; &nbsp;
+		<a href="Adtable.php">Manage Table</a> &nbsp; &nbsp;
+		<button id="logbutton" onclick="location.href='Login.html'">Log Out</button>
+	</nav>
+	<main>
+		<div id="wrapper13">
+			<label for="filter">Filter:</label>
+			<select id="filter">
+				<option value="all">All</option>
+				<option value="admin">Admin</option>
+				<option value="user">User</option>
+			</select>
+		</div>
+		<div class="table-container">
+			<table id="accTab">
+				<thead>
+					<tr>
+						<th style="width: 50px;">NO</th>
+						<th>USERNAME</th>
+						<th>EMAIL</th>
+						<th>TYPE</th>
+						<th>MANAGE</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</main>
+	<br><button id="savebut">SAVE</button>
+	<script>
+    $(document).ready(function() {
+  // Fetch user info from the PHP file for User_Info table
+  $.getJSON('phpfile/get_user_info.php', function(userData) {
+    // Fetch user info from the PHP file for Admin_Info table
+    $.getJSON('phpfile/get_admin_info.php', function(adminData) {
+      // Combine user and admin data into a single array
+      var data = userData.concat(adminData);
 
-		<link rel="stylesheet" href="BigMac.css">
-		<link rel="icon" type="image/x-icon" href="./images/logoBigMac.png">
+      // Generate HTML table rows
+      var rows = '';
+      $.each(data, function(index, user) {
+        rows += '<tr>';
+        rows += '<td>' + (index + 1) + '</td>';
+        rows += '<td class="username">' + user.username + '</td>';
+        rows += '<td>' + user.email + '</td>';
+        rows += '<td class="userType">' + (user.type === 'admin' ? 'Admin' : 'User') + '</td>';
+        rows += '<td>';
+        rows += '<p style="text-align: center;">';
+        rows += '<img src="images/editicon.png" alt="acc" width="30" height="30">&nbsp;&nbsp;';
+        rows += '<img id="' + (index + 1) + '" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">';
+        rows += '</p>';
+        rows += '</td>';
+        rows += '</tr>';
+      });
 
-	</head>
-	
+      // Update the table body with the generated rows
+      $('#accTab tbody').html(rows);
+    });
+  });
 
-	<body id="bodyhome">
-	
-		<nav>
-			<a href="Adacc.html" class="active">Manage Account</a> &nbsp; &nbsp;
-			<a href="Admenu.html">Manage Menu</a> &nbsp; &nbsp;
-			<a href="Adtable.php">Manage Table</a> &nbsp; &nbsp;
-			<button id="logbutton" onclick="location.href='Login.html'">Log Out</button>
-		</nav>
+  // Filter table based on user type selection
+  $('#filter').on('change', function() {
+    var userType = $(this).val();
 
+    // Show/hide rows based on user type
+    if (userType === 'user') {
+      $('.userType').each(function() {
+        var type = $(this).text();
+        if (type !== 'User') {
+          $(this).closest('tr').hide();
+        } else {
+          $(this).closest('tr').show();
+        }
+      });
+    } else if (userType === 'admin') {
+      $('.userType').each(function() {
+        var type = $(this).text();
+        if (type !== 'Admin') {
+          $(this).closest('tr').hide();
+        } else {
+          $(this).closest('tr').show();
+        }
+      });
+    } else {
+      $('tbody tr').show();
+    }
+  });
+});
 
-        <main>
-        <div id="wrapper13">
-            <label for="filter">Filter:</label>
-            <select id="filter">
-              <option value="all">All</option>
-              <option value="admin">Admin</option>
-              <option value="user">User</option>
-            </select>
-        </div>
-        <div class="table-container">
-            
-            <table id="accTab">
-                <thead>
-                <tr>
-                  <th style="width: 50px;">NO</th>
-                  <th>USERNAME</th>
-                  <th>EMAIL</th>
-                  <th>TYPE</th>
-                  <th>MANAGE</th>
-                </tr>
-                <thead>
-
-                <tbody>
-                <tr>
-                  <td>1</td>
-                  <td id="username">Affif720</td>
-                  <td>Affif720@gmail.com</td>
-                  <td id="userType">Admin</td>
-                  <td>
-                        <p style="text-align:  center;">
-                            <img src="images/editicon.png" alt="acc" width="30" height="30"> &nbsp;&nbsp;
-                            <img id="1" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">
-                        </p> 
-                </td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td id="username">Zaem</td>
-                  <td>Zaem@gmail.com</td>
-                  <td id="userType">User</td>
-                  <td>
-                    <p style="text-align:  center;">
-                        <img src="images/editicon.png" alt="acc" width="30" height="30"> &nbsp;&nbsp;
-                        <img id="2" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">
-                    </p> 
-                    </td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td id="username">HalimHensem</td>
-                  <td>Halim@Hotmail.com</td>
-                  <td id="userType">User</td>
-                  <td>
-                    <p style="text-align:  center;">
-                        <img src="images/editicon.png" alt="acc" width="30" height="30"> &nbsp;&nbsp;
-                        <img id="3" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">
-                    </p> 
-                    </td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td id="username">Luqasparov</td>
-                  <td>Luqasparov@gmail.com</td>
-                  <td id="userType">Admin</td>
-                  <td>
-                    <p style="text-align:  center;">
-                        <img src="images/editicon.png" alt="acc" width="30" height="30"> &nbsp;&nbsp;
-                        <img id="4" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">
-                    </p> 
-                    </td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td id="username">Amirul</td>
-                  <td>Amirul@gmail.com</td>
-                  <td id="userType">User</td>
-                  <td>
-                    <p style="text-align:  center;">
-                        <img src="images/editicon.png" alt="acc" width="30" height="30"> &nbsp;&nbsp;
-                        <img id="5" class="delete" src="images/delicon.png" alt="acc" width="30" height="30">
-                    </p> 
-                </td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td id="username">null</td>
-                  <td>null</td>
-                  <td id="userType">null</td>
-                  <td>
-                    <p style="text-align:  center;">
-                        <img src="images/addicon.png" alt="acc" width="30" height="30">
-                    </p> 
-                </td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td id="username">null</td>
-                  <td>null</td>
-                  <td id="userType">null</td>
-                  <td>
-                    <p style="text-align:  center;">
-                        <img src="images/addicon.png" alt="acc" width="30" height="30">
-                    </p> 
-                </td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td id="username">null</td>
-                    <td>null</td>
-                    <td id="userType">null</td>
-                    <td>
-                        <p style="text-align:  center;">
-                            <img src="images/addicon.png" alt="acc" width="30" height="30">
-                        </p> 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>9</td>
-                    <td id="username">null</td>
-                    <td>null</td>
-                    <td id="userType">null</td>
-                    <td>
-                        <p style="text-align:  center;">
-                            <img src="images/addicon.png" alt="acc" width="30" height="30">
-                        </p> 
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>10</td>
-                    <td id="username">null</td>
-                    <td>null</td>
-                    <td id="userType">null</td>
-                    <td>
-                        <p style="text-align:  center;">
-                            <img src="images/addicon.png" alt="acc" width="30" height="30">
-                        </p> 
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            
-        </main>
-
-        <br><button id="savebut">SAVE</button>
-<script src="scripts\filterAcc.js" type="text/javascript"></script>
+  </script>
+  <!-- <script src="scripts\filterAcc.js" type="text/javascript"></script> -->
 </body>
-
-
 </html>
