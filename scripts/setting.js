@@ -41,7 +41,7 @@ function toggleForm(formId) {
 
         // Add line breaks between the buttons
         for (var m = 0; m < buttons.length - 1; m++) {
-            buttons[m].insertAdjacentHTML('afterend', '<br>');
+            buttons[m].insertAdjacentHTML('afterend', '<br><br>');
         }
     }
 }
