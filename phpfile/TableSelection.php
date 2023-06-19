@@ -32,7 +32,7 @@
 
                     for ($i = 1; $i <= 30; $i++) {
                         $tableClass = $tableStatus[$i] === "Booked" ? "tableBooked" : "table";
-                        $clickable = $tableStatus[$i] === "Booked" ? "" : "tableClicked('.$i.')";
+                        $clickable = $tableStatus[$i] === "Booked" ? "" : "tableClicked('$i')";
                         echo '<div class="' . $tableClass . '" onclick="'.$clickable.'">Table ' . $i . '</div>';
                         if($i%5 === 0){
                             echo "<br>";
