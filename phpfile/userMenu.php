@@ -122,7 +122,7 @@ if(isset($_GET['delete'])){
         <div class="footer container">
             <div class="row">
                 <div class="col">
-                    <img src="images/logoBigMac.png" class="logo" alt="logo BigMac">
+                    <img src="../images/logoBigMac.png" class="logo" alt="logo BigMac">
                     <p>Subscribe BigMac to get immediate offer and interesting menu.</p>
                     <source>
                 </div>

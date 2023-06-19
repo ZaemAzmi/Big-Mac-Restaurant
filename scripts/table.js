@@ -11,7 +11,7 @@ function tableClicked(tableNumber) {
       if (xhr.status === 200) {
         // Handle the server response if needed
         console.log('Table inserted and updated successfully');
-        location.href = 'http://localhost/Pr/altPreorder.html'; // Redirect to the next page
+        location.href = 'http://localhost/Pr/phpfile/userMenu.php'; // Redirect to the next page
       } else {
         console.error('Error inserting and updating table:', xhr.status);
       }
