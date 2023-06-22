@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2023 at 06:52 PM
+-- Generation Time: Jun 22, 2023 at 05:13 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -28,12 +28,33 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cartdb` (
+  `CartID` int(11) NOT NULL,
   `Username` varchar(255) NOT NULL,
   `Name` varchar(255) NOT NULL,
   `Item` varchar(255) NOT NULL,
   `Quantity` int(11) NOT NULL,
   `Price` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cartdb`
+--
+ALTER TABLE `cartdb`
+  ADD PRIMARY KEY (`CartID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `cartdb`
+--
+ALTER TABLE `cartdb`
+  MODIFY `CartID` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
